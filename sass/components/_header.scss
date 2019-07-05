@@ -1,0 +1,47 @@
+.header{
+    position: relative;
+    
+    &__image{
+        background-size: cover;
+        height: 45vh;
+        //background-blend-mode: overlay;
+        background-position: bottom;
+        background-image: linear-gradient(to right bottom,
+                          rgba(var(--color-grey-dark-rgb),.5) 0%,
+                          rgba(var(--color-grey-light-rgb),.3) 100%,         
+                          transparent 45%),
+                          url(../../img/binary.jpg);
+                          //clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 75% 85%, 65% 100%, 60% 85%, 0% 85%);                              
+                  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 85% 100%, 0% 100%);                              
+                          clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 85% 100%, 0% 100%);                              
+      
+        
+    }
+    
+    &__text-box{
+        @include center-absolute;
+        font-size: var(--font-size-huge);
+        
+    }
+
+    &__text{
+        
+
+        &--name{
+            color: red;
+            
+        }
+
+        &--symbol{
+            color: white;
+            
+        }
+
+        &--surname{
+            color: purple;
+        }
+    }
+
+    
+    
+}

@@ -1,7 +1,38 @@
+/*
+0 - 600 PX =  PHONE
+600 - 900 PX = TABLET PORTRAY
+900 - 1200 PX = TABLET LANDSCAPE
+1200 - 1800PX = DESKTOP
+1800+ PX =   BIG SCREENS
+
+$breakpoint argument choices
+-   phone
+-   tab-port
+-   tab-land
+-   big-desk
+
+1em = 16px
+
+*/
 :root {
   --color-primary: #75cac3;
   --color-primary-light: #d7f7f5;
   --color-primary-dark: #2a6171;
+  --color-blue-dark: #194cfa;
+  --color-blue-dark-rgb:25, 76, 250;
+  --color-blue-light: #799bee;
+  --color-blue-light-rgb: 121, 155, 238;
+  --color-grey-dark:#2c2e2f;
+  --color-grey-dark-rgb:44, 46, 47;
+  --color-grey-med: #666666;
+  --color-grey-med-rgb: 102, 102, 102;
+  --color-grey-light: #aaabaa;
+  --color-grey-light-rgb: 170, 171, 170;
+  --font-size-small: 1rem;
+  --font-size-std: 1.6rem;
+  --font-size-big: 2.6rem;
+  --font-size-very-big: 3.6rem;
+  --font-size-huge: 5.6rem;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3); }
 
 * {
@@ -21,35 +52,34 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-dark));
-  background-size: cover;
-  background-repeat: no-repeat;
   min-height: 100vh; }
 
 .container {
-  max-width: 120rem;
-  margin: 2rem;
   background-color: #fff;
   box-shadow: var(--shadow-dark);
   min-height: 40rem; }
 
-.bg-video {
-  height: 100%;
-  width: 100%;
-  opacity: .30; }
-  .bg-video__content {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; }
+.header {
+  position: relative; }
+  .header__image {
+    background-size: cover;
+    height: 45vh;
+    background-position: bottom;
+    background-image: linear-gradient(to right bottom, rgba(var(--color-grey-dark-rgb), 0.5) 0%, rgba(var(--color-grey-light-rgb), 0.3) 100%, transparent 45%), url(../../img/binary.jpg);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 85% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 85% 100%, 0% 100%); }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-huge); }
+  .header__text--name {
+    color: red; }
+  .header__text--symbol {
+    color: white; }
+  .header__text--surname {
+    color: purple; }
 
 .section-about {
-  height: 90vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; }
-  .section-about__video {
-    background-color: #ccc;
-    height: 45vh; }
-  .section-about__description {
-    background-color: #aab33a;
-    height: 45vh; }
+  height: 95vh; }

@@ -1,6 +1,8 @@
-@import "./base/base";
-@import "./layout";
+@import "abstract/mixins";
 
-@import "./components/bg-video";
+@import "base/base";
+@import "base/layout";
 
-@import "./pages/home";
+@import "components/header";
+
+@import "pages/home";
