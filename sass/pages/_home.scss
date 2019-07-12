@@ -1,4 +1,7 @@
 .section-about{
-    height: 95vh;    
+    // height: 95vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 

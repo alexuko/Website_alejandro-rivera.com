@@ -22,6 +22,10 @@ $breakpoint argument choices
   --color-blue-dark-rgb:25, 76, 250;
   --color-blue-light: #799bee;
   --color-blue-light-rgb: 121, 155, 238;
+  --color-green-dark: #018C58;
+  --color-green-dark-rgb: 1, 140, 88;
+  --color-green-light: #01b975;
+  --color-green-light-rgb: 1, 185, 117;
   --color-grey-dark:#2c2e2f;
   --color-grey-dark-rgb:44, 46, 47;
   --color-grey-med: #666666;
@@ -62,24 +66,30 @@ body {
 .header {
   position: relative; }
   .header__image {
-    background-size: cover;
+    background-size: repeat;
     height: 45vh;
-    background-position: bottom;
-    background-image: linear-gradient(to right bottom, rgba(var(--color-grey-dark-rgb), 0.5) 0%, rgba(var(--color-grey-light-rgb), 0.3) 100%, transparent 45%), url(../../img/binary.jpg);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 85% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 85% 100%, 0% 100%); }
+    background-position: top;
+    background-image: linear-gradient(to right bottom, rgba(var(--color-green-light-rgb), 0.8) 0%, rgba(var(--color-green-dark-rgb), 0.85) 100%, transparent 50%), url(../../img/Endless-Constellation.svg);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
+    opacity: .95; }
   .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: var(--font-size-huge); }
-  .header__text--name {
-    color: red; }
-  .header__text--symbol {
-    color: white; }
-  .header__text--surname {
-    color: purple; }
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-huge);
+    padding-bottom: 3rem; }
+  .header__text {
+    display: flex; }
+    .header__text--name {
+      color: red; }
+    .header__text--symbol {
+      color: white; }
+    .header__text--surname {
+      color: purple; }
 
 .section-about {
-  height: 95vh; }
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }

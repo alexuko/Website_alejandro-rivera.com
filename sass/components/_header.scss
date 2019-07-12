@@ -2,33 +2,51 @@
     position: relative;
     
     &__image{
-        background-size: cover;
+        background-size: repeat;
         height: 45vh;
         //background-blend-mode: overlay;
-        background-position: bottom;
-        background-image: linear-gradient(to right bottom,
-                          rgba(var(--color-grey-dark-rgb),.5) 0%,
-                          rgba(var(--color-grey-light-rgb),.3) 100%,         
-                          transparent 45%),
-                          url(../../img/binary.jpg);
-                          //clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 75% 85%, 65% 100%, 60% 85%, 0% 85%);                              
-                  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 85% 100%, 0% 100%);                              
-                          clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 85% 100%, 0% 100%);                              
+        background-position: top;
+        background-image: 
+        linear-gradient(to right bottom,
+        rgba(var(--color-green-light-rgb), .8) 0%,        
+        rgba(var(--color-green-dark-rgb), .85) 100%,         
+        transparent 50%),
+        url(../../img/Endless-Constellation.svg);
+        //clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 75% 85%, 65% 100%, 60% 85%, 0% 85%);                              
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%,50% 100% ,0% 75%);                              
+                clip-path: polygon(0% 0%, 100% 0%, 100% 75%,50% 100% ,0% 75%);    
+        opacity: .95; 
+        // background-image: linear-gradient(to right bottom,
+        //                   rgba(var(--color-grey-dark-rgb),.5) 0%,
+        //                   rgba(var(--color-grey-light-rgb),.3) 100%,         
+        //                   transparent 45%),
+        //                   url(../../img/binary.jpg);
+        //                   //clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 75% 85%, 65% 100%, 60% 85%, 0% 85%);                              
+        //           -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 85% 100%, 0% 100%);                              
+        //                   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 85% 100%, 0% 100%);                              
       
         
     }
     
     &__text-box{
-        @include center-absolute;
+        //@include center-absolute;
+
+        display: flex;
+        height: inherit;
+        justify-content: center;
+        align-items: center; 
         font-size: var(--font-size-huge);
+        padding-bottom: 3rem;
         
     }
 
     &__text{
+        display: flex;
         
 
         &--name{
             color: red;
+            
             
         }
 
