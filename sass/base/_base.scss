@@ -1,39 +1,29 @@
 :root{
 
     // COLOR PALETTE
-    --color-primary: #75cac3;
-    --color-primary-light: #d7f7f5;
-    --color-primary-dark: #2a6171;
-    
-    --color-blue-dark: #194cfa;
-    --color-blue-dark-rgb:25, 76, 250;
-    --color-blue-light: #799bee;
-    --color-blue-light-rgb: 121, 155, 238;
-
     --color-green-dark: #018C58;
     --color-green-dark-rgb: 1, 140, 88;
     --color-green-light: #01b975;
     --color-green-light-rgb: 1, 185, 117;
-    
-   
+    --color-green: #38C479;
+    --color-green-rgb: 56, 196, 121;
 
+    // --color-grey-dark:#2c2e2f;
+    --color-grey-dark:rgba(0, 0, 0, 0);
     
-    --color-grey-dark:#2c2e2f;
-    --color-grey-dark-rgb:44, 46, 47;
+
+    --color-grey-dark-rgb: 0, 0, 0;
     --color-grey-med: #666666;
-    --color-grey-med-rgb: 102, 102, 102;
-    --color-grey-light: #aaabaa;
-    --color-grey-light-rgb: 170, 171, 170;
-    
+    --color-grey-light:#efefef;
+        
+    --color-blue-dark: #194cfa;
+    --color-blue-light: #799bee;
 
-    //
-    // FONTS
-    --font-size-small: 1rem;
-    --font-size-std: 1.6rem;
-    --font-size-big: 2.6rem;
-    --font-size-very-big: 3.6rem;
-    --font-size-huge: 5.6rem;
-
+    /*************************
+    * FONTS
+    *************************/
+    --font-primary: 'Lato', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
     
 
 
@@ -57,8 +47,10 @@ html{
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-family: var(--font-primary);
+    // font-weight: 400;
     line-height: 1.6;
     min-height: 100vh;
+    background-color: var(--color-grey-light);
 }
+

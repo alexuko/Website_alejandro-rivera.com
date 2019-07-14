@@ -1,0 +1,27 @@
+.skills{
+    height: inherit;
+    background-color: rgba(var(--color-green-rgb), $alpha: 1);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 93%, 0% 100%);
+
+    background-image: linear-gradient(175deg,
+            rgba(var(--color-green-dark-rgb),.7) 0%,
+            rgba(var(--color-green-dark-rgb),.1) 50%,
+            transparent 50%);
+
+    &__box{
+        margin-top: 2rem;
+        padding: 3rem 15rem;
+        
+        &-professional{
+            height: 50%;
+    
+        }
+    
+        &-technical{
+            height: 50%;
+        }
+
+    }                
+
+
+}

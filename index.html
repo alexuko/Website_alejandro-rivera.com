@@ -5,30 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Alejandro Rivera</title>
 </head>
 <body>
-    <div class="container">
-
-        <section class="section-about">
-            <header class="header">
-                <div class="header__image">                    
+    <div class="container">        
+        <nav class="navigation">
+            <div class="nav-bar"> my navbar </div>
+        </nav>
+        <!---------------- SECTION SKILLS ----------------->
+        <section class="section section-about">                
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="./img/Typing_dark_03_Videvo.mov" type="video/mp4">
+                    <source src="./img/Typing_dark_03_Videvo.mov" type="video/webm">
+                    <source src="./img/Typing_dark_03_Videvo.mov" type="video/mov">
+                                YOUR BROWSER IS NOT SUPPORTED!                            
+                </video>
+            </div>
+            <!-- FIRST HALF OF THE SCREEN -->
+            <header class="header">                                    
+                <div class="header__image">
                     <div class="header__text-box">
-                        <h1 class="header__text"></h1>
-                            <span class="header__text--name">Alejandro</span>                        
-                            <span class="header__text--symbol">/</span>                        
-                            <span class="header__text--surname">Rivera</span>
+                        <h1 class="header__text">Alejandro Rivera
+                            <span>&nbsp;</span>
                         </h1>                
                     </div>
                 </div>
             </header>
+            <!-- SECOND HALF OF THE SCREEN -->
             <div class="profile">
-                <div class="profile__box">
-                    <h3 class="profile__title"></h3>
-                    <p class="profile__description"></p>
+                <div class="profile__box profile__box-left">
+                    <h3 class="profile__title">Web Developer</h3>
+                    <p class="profile__description">
+                            I’m a Web Developer, passionate about coding (particularly in JavaScript) and enthusiastic towards new technologies. Strong interest in client-side architecture as well as the UX and cross-platform development.
+                            <br>
+                            Main skills: JavaScript, CSS3, HTML5, Node.js, Java, PHP, Python, Web Applications.
+                            AWS cloud practitioner certified
+                            
+                    </p>
+                </div>
+                <div class="profile__box profile__box-right">&nbsp;</div>
+                <div class="profile__box profile__box-right">&nbsp;</div>
+            </div>
+        </section>
+        <!---------------- SECTION SKILLS ----------------->
+
+        <section class="section section-skills">
+            <div class="skills">
+                <div class="skills__box skills__box-professional">
+                    professional skills
+                </div>
+                <div class="skills__box skills__box-technical">
+                    technical skills
                 </div>
             </div>
         </section>

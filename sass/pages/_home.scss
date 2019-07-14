@@ -1,7 +1,16 @@
+.section{
+    height: 100vh;
+}
+
 .section-about{
-    // height: 95vh;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    position: relative;
+    
+}
+
+.section-skills{
+    display: flex;
+    flex-direction: column;
 }
 
