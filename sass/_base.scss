@@ -1,0 +1,106 @@
+// COLORS
+$color-white: #FFFFFF;
+$color-pumpkin: #F17105;
+
+$color-cadmium-orange: #FB8F37;
+$color-mellow-apricot: #FCB173;
+
+$color-mustard: #F5D451;
+$color-buff: #F8E28B;
+$color-lemon-meringue: #FCF1C5;
+
+$color-ruby: #D81159;
+$color-red-salsa: #FB3640;
+$color-fiery-rose: #FC5F67;
+$color-cyclamen: #F47CA8;
+$color-fuchsia-rose: #C4457A;
+$color-french-rose: #F04282;
+$color-salmon-pink: #FD9BA0;
+$color-raisin-black: #29282A;
+$color-spanish-grey: #9A9998;
+$color-davis-grey: #5E5E5A;
+$color-sonic-silver: #707070;
+$color-silver: #C2C2C1;
+$color-platinium: #ECECEB;
+$color-quinacridone-magenta: #8F2D56;
+$color-dark-slate-blue: #3C438D;
+$color-uranian-blue: #B9DEFE;
+$color-celadon-blue: #227DAA;
+$color-iris: #4B57D2;
+$color-persian-indigo: #320D6D;
+$color-electric-indigo: #6E24E5;
+$color-purple: #4B13A4;
+$color-medium-purple: #9E6DEE;
+$color-dodger-blue: #2196FD;
+$color-blue-jeans: #5DB3FD;
+$color-blue-eyes: #9ACFFE;
+$color-carolina-blue: #44A8DA;
+$color-uranian-blue: #AAD7EE;
+$color-celadon-green: #218380;
+$color-tiffany-green: #2DB4AF;
+
+$color-medium-turquoise: #3ACFCA;
+$color-celeste: #9DE7E4;
+$color-blue-sapphire: #175676;
+$color-indigo-dye: #144B66;
+$color-indigo-dye-dark: #103F56;
+
+
+// FONT VARIABLES
+$font-primary: 'Raleway', sans-serif;
+$font-secondary: 'Ubuntu', sans-serif;
+$font-tertiary: 'Montserrat', sans-serif;
+
+// MEDIA QUERIES BREAK POINTS
+$bp-largest: 75em; //1200/16px = 75
+$bp-large: 62.5em; //1000/16px = 62.5
+$bp-medium: 50em; //800/16px = 50
+$bp-small: 37.5em; //600/16px = 50
+
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;// 10px / 16px = 62.5% => 1rem = 10px  
+}
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: $font-secondary;
+    color: $color-celeste;
+    
+}
+
+::selection{
+    background-color: $color-pumpkin; 
+    color: $color-white;
+    
+ }
+
+body{
+    // font-family: $font-secondary;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+
+}
+
+.main__container{
+
+    display: grid;
+    grid-template-rows: 10vh minmax(min-content, 5rem) repeat(4,min-content);
+    grid-template-columns: [full-start] 1fr [center-start] repeat(6,[col-start] minmax(min-content, 12.5%) [col-end]) [center-end] 1fr [full-end];
+    
+}
+
+///////////
+// BTN
+
+.btn{
+    padding: 1rem 2rem;
+    background-color: rgba($color-white, .2);
+    border: none;
+    cursor: pointer;
+
+}

@@ -4,10 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Raleway:wght@200;400;500&family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
+    <main class="main__container">
+        <!-- HEADER  -->
+        <header class="header">header</header>      
+        
+        <!-- NAVIGATION -->
+        <nav class="navigation">navigation</nav>
+
+        <!-- ABOUT  -->
+        <section class="about">about</section>
+
+        <!-- PROJECTS  -->
+        <section class="projects">projects
+        </section>
+        <div class="projects__box">box</div>
+        
+        <!-- SKILLS  -->
+        <section class="skills">skills</section>
+
+        <!-- FOOTER  -->
+        <footer class="footer">
+            <!-- FORM  -->
+            <form class="footer__form-box" action="#">
+                <div class="footer__group footer__group--1">
+                    <input class="footer__input" type="text" id="name" name="name" placeholder="Name" /required>
+                    <label class="footer__label" for="name">Name</label>
+                </div>
+                
+                <div class="footer__group footer__group--2">
+                    <input class="footer__input" type="email" id="email" name="email" placeholder="E-mail"/required>
+                    <label class="footer__label" for="email">E-mail</label>
+                </div>
+
+                <div class="footer__group footer__group--3">
+                    <textarea class="footer__input" type="message" id="message" name="message" rows="3"  placeholder="Message" /required></textarea>
+                </div>
+
+                <div class="footer__group footer__group--4">
+                    <input class="btn footer__btn-form" type="submit" value="Submit">
+                </div>                    
+            </form>
+                
+            
+            
+            <!-- ICONS  -->
+            <div class="footer__icon-box">
+                <svg class="footer__icon-box--item">
+                    <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+                </svg>                
+                <svg class="footer__icon-box--item">
+                    <use xlink:href="img/sprite.svg#icon-github"></use>
+                </svg>                
+                <svg class="footer__icon-box--item">
+                    <use xlink:href="img/sprite.svg#icon-codepen"></use>
+                </svg>                
+                <svg class="footer__icon-box--item">
+                    <use xlink:href="img/sprite.svg#icon-envelope"></use>
+                </svg>                
+            </div>
+
+            <!-- COPYRIGHT  -->
+            <div class="footer__copyright">&copy; copyright 2020, Alejandro Rivera, All rights reserved.</div>
+        </footer>
+
+
+
+    </main>
     
 </body>
 </html>
