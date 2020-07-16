@@ -1,5 +1,7 @@
 .navigation{
-    background-color: #3c8cff;
+    background-color: $color-purple;
     grid-row: 2/3;
     grid-column: full-start/full-end;
+
+    // height: 8rem;
 }

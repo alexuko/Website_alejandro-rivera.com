@@ -1,5 +1,6 @@
 .about{
-    background-color: red;
+    background-color: $color-indigo-dye-dark;
     grid-row: 3/4;
     grid-column: full-start/full-end;
+    // height: 10rem;
 }

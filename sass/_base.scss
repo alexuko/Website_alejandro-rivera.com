@@ -1,9 +1,6 @@
 // COLORS
-$color-white: #FFFFFF;
-$color-pumpkin: #F17105;
 
-$color-cadmium-orange: #FB8F37;
-$color-mellow-apricot: #FCB173;
+$color-orange: #FB8F37;
 
 $color-mustard: #F5D451;
 $color-buff: #F8E28B;
@@ -16,40 +13,49 @@ $color-cyclamen: #F47CA8;
 $color-fuchsia-rose: #C4457A;
 $color-french-rose: #F04282;
 $color-salmon-pink: #FD9BA0;
-$color-raisin-black: #29282A;
-$color-spanish-grey: #9A9998;
-$color-davis-grey: #5E5E5A;
-$color-sonic-silver: #707070;
-$color-silver: #C2C2C1;
-$color-platinium: #ECECEB;
+
 $color-quinacridone-magenta: #8F2D56;
 $color-dark-slate-blue: #3C438D;
 $color-uranian-blue: #B9DEFE;
-$color-celadon-blue: #227DAA;
 $color-iris: #4B57D2;
 $color-persian-indigo: #320D6D;
 $color-electric-indigo: #6E24E5;
 $color-purple: #4B13A4;
-$color-medium-purple: #9E6DEE;
-$color-dodger-blue: #2196FD;
-$color-blue-jeans: #5DB3FD;
-$color-blue-eyes: #9ACFFE;
-$color-carolina-blue: #44A8DA;
 $color-uranian-blue: #AAD7EE;
 $color-celadon-green: #218380;
 $color-tiffany-green: #2DB4AF;
 
+$color-davis-grey: #5E5E5A;
+$color-spanish-grey: #9A9998;
+$color-sonic-silver: #707070;
+$color-silver: #C2C2C1;
+
+// font colors
+$color-raisin-black: #29282A;
+$color-platinium: #ECECEB;
+
+//color already in use
+$color-white: #FFFFFF;
+$color-tangerine: #F58B00;
 $color-medium-turquoise: #3ACFCA;
 $color-celeste: #9DE7E4;
 $color-blue-sapphire: #175676;
 $color-indigo-dye: #144B66;
 $color-indigo-dye-dark: #103F56;
 
-
 // FONT VARIABLES
 $font-primary: 'Raleway', sans-serif;
 $font-secondary: 'Ubuntu', sans-serif;
 $font-tertiary: 'Montserrat', sans-serif;
+
+// FONT SIZES
+$font-mini: 1rem;
+$font-small: 1.3rem;
+$font-med: 1.6rem;
+$font-large: 2rem;
+$font-big: 2.6rem;
+$font-huge: 3.2rem;
+$font-massive: 4rem;
 
 // MEDIA QUERIES BREAK POINTS
 $bp-largest: 75em; //1200/16px = 75
@@ -68,12 +74,12 @@ html{
     padding: 0;
     box-sizing: inherit;
     font-family: $font-secondary;
-    color: $color-celeste;
+    
     
 }
 
 ::selection{
-    background-color: $color-pumpkin; 
+    background-color: $color-tangerine; 
     color: $color-white;
     
  }
@@ -83,6 +89,7 @@ body{
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: 1.5px;
+    color: $color-platinium;
 
 }
 
