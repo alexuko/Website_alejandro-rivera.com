@@ -49,7 +49,7 @@
         justify-content: center;
         flex-direction: column;
         box-shadow: -7px 7px 1.5rem rgba(#000000, .7); 
-        padding:  2rem 8%;
+        padding:  3rem 8% 1.5rem;
         width: 100%;
     }
 
@@ -105,9 +105,9 @@
         font-weight: 600;   
     }
 
-    &__input:placeholder-shown ~ &__label {
-        
+    &__input:placeholder-shown ~ &__label {        
         opacity: 0;// animation doesn not work without opacity
+        // display: none;
         visibility: hidden;
         transform: translate(.9rem, -2.8rem);
     }
@@ -123,19 +123,18 @@
     &__btn-form:link,
     &__btn-form:active{        
         background-color: transparent;
-        border: 1.5px solid rgba($color-celeste, .2);
+        border: 2px solid rgba($color-celeste, .2);
         transition: all .3s;
         color: $color-platinium;
         
         &:hover{
-            background-color: rgba($color-celeste, .3);
-            border: 1.5px solid rgba($color-celeste, .6);
+            background-color: rgba($color-celeste, .2);
+            border: 2px solid rgba($color-celeste, .6);
             transform: scale(1.1);          
         }
 
         &:active{
             background: rgba($color-red-salsa, .7);
-            outline: none;
         }
       
     }
@@ -176,6 +175,7 @@
     &__copyright{
         font-size: 1.5rem;
         font-weight: 100;
+        text-transform: capitalize;
         text-align: center;
         color: $color-platinium;
     }

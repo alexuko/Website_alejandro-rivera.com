@@ -1,7 +1,7 @@
 .skills{
     grid-row: 5/6;
     grid-column: center-start/center-end;
-    padding: 5rem 0;
+    padding: 10rem 0;
     color: $color-raisin-black;    
     
     &__box{
@@ -10,13 +10,11 @@
         grid-template-columns: repeat(6, minmax(fit-content, 1fr));
         grid-template-rows: repeat(2, min-content);
         column-gap: 1rem;
-        border: 1px solid rgba($color-celeste, .8);
+        border: 1.5px solid rgba($color-celeste, .6);
         border-radius: 7px;  
         overflow: hidden;
-        
-        
-        
     }
+    
     &__content{
         grid-row: 1/2;
         grid-column: 1/-1;
@@ -28,16 +26,20 @@
         flex: 1 0 200px ;
         padding: 4rem 1rem;
         flex-wrap: wrap;
-        border-right: 1px solid rgba($color-celeste, .3);
+
+        &:not(:nth-last-child(1)){    
+            border-right: 1.5px solid rgba($color-celeste, .4);
+        }
         
 
         
         &__header{
-            // background-color: rgba($color-electric-indigo, .1);
             display: flex;
+            justify-content: flex-start;
             align-items: center;
-            justify-content: left;
             flex-direction: column;
+            min-height: 10rem;
+            // background-color: blue;
             
         }
         
@@ -60,7 +62,7 @@
             list-style: none;
             display: flex;
             flex-wrap: wrap;
-            margin-top: 1rem;
+            margin-top: .5rem;
             // background-color: red ;
             & li{
                 flex: 1 1 100%;
@@ -95,10 +97,9 @@
         &::before, &::after{
             content: "";
             height: 100%;
-            width: 100px;
+            width: 120px;
             position: absolute;
-            // background-color: red;
-            background: linear-gradient(to right,#ffffff 0%, rgba(255,255,255, .2) 100%);
+            background: linear-gradient(to right,$color-white 0%, rgba($color-white, .1) 100%);
             z-index: 5;
         }
         &::before{
@@ -110,10 +111,12 @@
             right: 0;
             transform: rotateZ(180deg);
         }
+        
+        
+
 
         .slider{
-            width: 100rem;
-            height: 100px;
+            width: 100rem;            
             background: white;
             display: flex;
         }
@@ -121,7 +124,7 @@
             height: 100px;
             display: flex;
             align-items: center;
-            animation: slide-me 30s linear infinite;
+            // animation: slide-me 30s linear infinite;
             &__icon{
                 fill: rgba($color-celeste, .8);
                 height: 3rem;
@@ -131,8 +134,6 @@
 
                 &:hover {
                     fill: rgba($color-tangerine, .7);
-
-
                 }
             }
         }
