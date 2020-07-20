@@ -1,7 +1,7 @@
 .skills{
     grid-row: 5/6;
     grid-column: center-start/center-end;
-    padding: 10rem 0;
+    padding: $padding-big 0;
     color: $color-raisin-black;    
     
     &__box{

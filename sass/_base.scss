@@ -28,6 +28,9 @@ $color-davis-grey: #5E5E5A;
 $color-spanish-grey: #9A9998;
 $color-silver: #C2C2C1;
 
+//////////////////////////////////
+/// COLORS 
+
 // font colors
 $color-sonic-silver: #707070;
 $color-raisin-black: #29282A;
@@ -43,12 +46,16 @@ $color-blue-sapphire: #175676;
 $color-indigo-dye: #144B66;
 $color-indigo-dye-dark: #103F56;
 
-// FONT VARIABLES
+//////////////////////////////////
+/// FONT FAMILIES 
+
 $font-primary: 'Raleway', sans-serif;
 $font-secondary: 'Ubuntu', sans-serif;
 $font-tertiary: 'Montserrat', sans-serif;
 
-// FONT SIZES
+//////////////////////////////////
+/// FONT SIZES 
+ 
 $font-mini: 1rem;
 $font-small: 1.3rem;
 $font-med: 1.6rem;
@@ -57,12 +64,18 @@ $font-big: 2.6rem;
 $font-huge: 3.2rem;
 $font-massive: 4rem;
 
-// MEDIA QUERIES BREAK POINTS
+//////////////////////////////////
+/// MEDIA QUERIES BREAK POINTS
+
 $bp-largest: 75em; //1200/16px = 75
 $bp-large: 62.5em; //1000/16px = 62.5
 $bp-medium: 50em; //800/16px = 50
 $bp-small: 37.5em; //600/16px = 50
 
+//////////////////////////////////
+/// PADDINGS 
+$padding-big: 10rem;
+$padding-med: 7rem;
 
 html{
     box-sizing: border-box;
@@ -81,6 +94,7 @@ html{
 ::selection{
     background-color: $color-tangerine; 
     color: $color-white;
+    font-weight: 400;
     
  }
 
@@ -103,11 +117,53 @@ body{
 
 ///////////
 // BTN
-
 .btn{
-    padding: 1rem 2rem;
-    background-color: rgba($color-white, .2);
-    border: none;
-    cursor: pointer;
+    // background: orangered;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);//align it exactly in the middle
+    width: 15rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    font-family: $font-secondary;
+    font-size: $font-large;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: $color-ruby;
+    transition-duration: .2s;
+    &:hover{
+        font-size: $font-big;
+    }
+
+    & svg,
+    & svg rect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        fill: transparent;
+        
+    }
+
+    & svg rect {
+        stroke: $color-ruby;
+        stroke-width: 5;
+        transition: .5s;
+        stroke-dasharray: 500,500;
+        stroke-dashoffset: 0;
+
+        
+        &:hover{
+            stroke-dasharray: 100,400;
+            stroke-dashoffset: 272;
+            // stroke-dasharray: 100;
+            // stroke-dashoffset: 75;
+            stroke: rgba($color-electric-indigo, .7);
+        }
+
+    }
 
 }
