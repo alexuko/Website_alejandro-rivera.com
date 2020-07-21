@@ -1,69 +1,70 @@
-.footer{
-    display: none;
+.footer {
     background-color: $color-indigo-dye;
     grid-row: 6/7;
     grid-column: full-start/full-end;
 
+    display: grid;
+    grid-template-columns: 1fr [mid-start] repeat(3, minmax(max-content, 1fr)) [mid-end]  1fr;
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    gap: 2rem;
+    justify-items: center;
+
+}
+
+.form-container {
+    padding: $padding-med 0;
+    grid-row: 1/2;
+    grid-column: mid-start / mid-end;
+}
+
+.form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    // justify-content: center;
     
+    border-radius: 5px;
+    box-shadow: -7px 7px 1.5rem rgba(#000000, .7);
+    border: 2px solid rgba($color-blue-sapphire, .4);
+    padding: 3rem 7% 1.5rem;
+    width: 80vw;
+    max-width: 40rem;
 
-    &__form{
-        padding: $padding-med 0;
+    &__title {
 
-        &--title{
-            color: $color-platinium;
-            font-family: $font-tertiary;
-            font-weight: 400;
-            font-size: $font-big;
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 3rem;
-            position: relative;
-            
+        color: $color-platinium;
+        font-family: $font-tertiary;
+        font-weight: 400;
+        font-size: $font-big;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        position: relative;
 
-            &::after{
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 1.5px;
-                background: $color-platinium;
-                transform: scaleX(.6);
-
-
-                
-            }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 15%;
+            width: 70%;
+            height: 1.5px;
+            background: $color-platinium;
+            transform: scaleX(.6);
         }
-        
     }
 
-    &__form-box{
-        border: 2px solid rgba($color-blue-sapphire, .4);
-        border-radius: 3px;        
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        flex-direction: column;
-        box-shadow: -7px 7px 1.5rem rgba(#000000, .7); 
-        padding:  3rem 8% 1.5rem;
-        width: 100%;
-    }
-
-    &__group{
+    &__group {
         margin: .5rem 0;
 
-        &--4{
+        &--3 input{
+            height: 5rem;
+        }
+
+        &--4 {
             margin-top: 1.5rem;
             margin-left: auto;
         }
-        
-    }  
-        
-   
+
+    }
+
     &__input,
     &__input:active,
     &__input:link{
@@ -73,55 +74,52 @@
         border-radius: 3px 3px 0px 0px;
         padding: .7rem;
         width: 100%;
-        display: block;     
+        display: block;
         border-bottom: 3px solid transparent;
 
-        &::placeholder{
+        &::placeholder {
             color: rgba($color-medium-turquoise, .5);
-            
-        }            
-        
-    
 
-        &:focus{
+        }
+
+        &:focus {
             outline: none;
             box-shadow: -0.3rem 0.3rem 0.8rem rgba(#000000, 0.4);
             color: rgba($color-medium-turquoise, 1.0);
             border-bottom: 3px solid $color-celeste;
         }
 
-        &:focus:invalid{
+        &:focus:invalid {
             border-bottom: 3px solid $color-red-salsa;
-
         }
-        
+
     }
 
-    &__label{
+    &__label {
         display: block;
         transition: all .4s;
         transform: translate(.9rem, -4.5em);
         font-size: 1.2rem;
-        font-weight: 600;   
+        font-weight: 600;
     }
 
-    &__input:placeholder-shown ~ &__label {        
-        opacity: 0;// animation doesn not work without opacity
+    &__input:placeholder-shown ~ &__label {
+        opacity: 0; // animation doesn not work without opacity
         // display: none;
         visibility: hidden;
         transform: translate(.9rem, -2.8rem);
     }
 
-    textarea{
-        width: 100%;
-        min-height: 6.43rem;
-        max-height: 12rem;
+    textarea {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 10rem;
+        max-height: 20rem;
     }
 
-    
-    &__btn-form,
-    &__btn-form:link,
-    &__btn-form:active{        
+    &__btn,
+    &__btn:link,
+    &__btn:active{
         padding: 1rem 2rem;
         background-color: rgba($color-white, .2);
         border: none;
@@ -130,62 +128,58 @@
         border: 2px solid rgba($color-celeste, .2);
         transition: all .3s;
         color: $color-platinium;
-        
-        &:hover{
+    
+        &:hover {
             background-color: rgba($color-celeste, .2);
             border: 2px solid rgba($color-celeste, .6);
-            transform: scale(1.1);          
+            transform: scale(1.1);
         }
-
-        &:active{
+    
+        &:active {
             background: rgba($color-red-salsa, .7);
         }
-      
-    }
-   
-    &__social{
-        background-color: $color-indigo-dye-dark;
-        width: 100%;
-        padding: 1.5%;
-        
-    }
-
-
     
-    &__icon-box{              
+    }
+}
+
+.social {
+    grid-row: 2/-1;
+    grid-column: 1 / -1;
+
+    background-color: $color-indigo-dye-dark;
+    width: 100%;
+    padding: 2%;
+
+    &__icon-box {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
 
-        &--link{
+        &--link {
             color: transparent;
         }
-        &--item{
+
+        &--item {
             fill: rgba($color-medium-turquoise, .7);
             height: 3.7rem;
             width: 3.7rem;
             margin: 1rem 2rem;
             transition: all .3s;
             cursor: pointer;
-            
-            &:hover{
+
+            &:hover {
                 fill: $color-platinium;
                 transform: translate(3px, -2px) scale(1.2);
-            }           
+            }
         }
 
     }
 
-    &__copyright{
+    &__copyright {
         font-size: 1.5rem;
         font-weight: 100;
         text-transform: capitalize;
         text-align: center;
         color: $color-platinium;
     }
-
-
 }
-
-
-

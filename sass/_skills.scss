@@ -85,8 +85,7 @@
     &__carousel{
         // background: salmon;
         grid-column: 1/-1;
-        grid-row: 2/3;
-        
+        grid-row: 2/3;        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -124,7 +123,7 @@
             height: 100px;
             display: flex;
             align-items: center;
-            // animation: slide-me 30s linear infinite;
+            animation: slide-me 30s linear infinite;
             &__icon{
                 fill: rgba($color-celeste, .8);
                 height: 3rem;
