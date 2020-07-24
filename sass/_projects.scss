@@ -20,7 +20,7 @@
     -moz-perspective: 180rem;
     position: relative;
     height: 60vh;
-    max-width: 45rem;
+    max-width: 40rem;
     
     
     &__side{
@@ -30,18 +30,19 @@
         top: 0;
         left: 0;
         width: 100%;    
-        transition: all .6s ease-in-out;
+        transition: all 1s ease-in-out;
         backface-visibility: hidden;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
-        // overflow: hidden;
+        transform-style: preserve-3d;
+        
         
         &::after{
             content: '';
             position: absolute;
-            background: rgba($color-raisin-black, .5);
-            bottom: -40px;
+            background: rgba($color-raisin-black, 50%);
+            bottom: -30px;
             left: 5%;
             width: 90%;
             height: 12px;
@@ -74,7 +75,7 @@
         // object-fit: cover;
         // object-position: right center;
         background-size: cover;
-        background-position: center right;
+        background-position: center;
         // border-radius: 5px 5px 0 0;//same border radius than SIDE
         background-blend-mode: screen;
         
@@ -95,9 +96,8 @@
         align-self: center;
         margin: 3rem 0;
         padding: .5rem 3rem;
-        position: relative;
+        position: relative; 
         color: $color-raisin-black;
-        // background-color: red;
         
        
     }
@@ -172,6 +172,8 @@
         fill: rgba($color-electric-indigo, .4);
         // fill: rgba($color-red-salsa, .5);
         margin: 0 1.5rem;
+        // transform: perspective(500px) translateZ(35px);
+        // backface-visibility: hidden;
         
     }
 
@@ -181,6 +183,8 @@
         padding: 5rem 0;        
         position: relative;
         // background: lightcoral;
+        // transform: perspective(500px) translateZ(35px);
+        // backface-visibility: hidden;
     }
 
 

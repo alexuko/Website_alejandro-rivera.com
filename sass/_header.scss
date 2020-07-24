@@ -2,4 +2,76 @@
     background-color: $color-quinacridone-magenta;
     grid-row: 1/2;
     grid-column: full-start/full-end;
+    
+
+    
+}
+
+.hexagons-box{
+    background: #111;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    animation: change-color 4s linear infinite;
+}
+
+
+.row{
+    display: inline-flex;
+    margin-top: -30px;
+    margin-left: -55px;
+}
+.row:nth-child(even){
+    margin-left: 1px;
+}
+.hexagon{
+    position: relative;
+    background: #111;
+      width: 110px;    
+      height: 109px;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      transform: rotate(90deg);
+      margin: 1px;    
+      transition: 2s;
+      cursor: crosshair;
+      &:hover{
+          transition: 0s;
+        background: green;
+    }
+      &:before{
+          content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: rgba(0,0,0,.3);
+        z-index: 3;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        left: 4px;
+        right: 4px;
+        /*   top: 10%;
+        bottom: 10%;
+        left: 1%;
+        right: 1%; */
+        background: #111;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        z-index: 5;
+        
+      }
+    }
+    
+@keyframes change-color{
+  0%{
+    filter: hue-rotate(0deg);
+  } 
+  100%{
+    filter: hue-rotate(360deg);
+  }
+
 }

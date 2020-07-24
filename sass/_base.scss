@@ -19,7 +19,6 @@ $color-uranian-blue: #B9DEFE;
 $color-iris: #4B57D2;
 $color-persian-indigo: #320D6D;
 $color-electric-indigo: #6E24E5;
-$color-purple: #4B13A4;
 $color-uranian-blue: #AAD7EE;
 $color-celadon-green: #218380;
 $color-tiffany-green: #2DB4AF;
@@ -36,6 +35,12 @@ $color-sonic-silver: #707070;
 $color-raisin-black: #29282A;
 $color-platinium: #ECECEB;
 
+
+//Nav-Bar
+$color-purple: #4B13A4;
+$color-purple-light: #8648EA;
+$color-purple-lighter: #E7DAFB;
+$color-purple-lightest: #F3EDFD;
 //color already in use
 $color-white: #FFFFFF;
 $color-tangerine: #F58B00;
@@ -56,11 +61,10 @@ $font-tertiary: 'Montserrat', sans-serif;
 //////////////////////////////////
 /// FONT SIZES 
  
-$font-mini: 1rem;
-$font-small: 1.3rem;
+$font-small: 1rem;
 $font-med: 1.6rem;
-$font-large: 2rem;
-$font-big: 2.6rem;
+$font-large: 2.2rem;
+$font-big: 2.8rem;
 $font-huge: 3.2rem;
 $font-massive: 4rem;
 
@@ -110,8 +114,8 @@ body{
 .main__container{
 
     display: grid;
-    grid-template-rows: 10vh minmax(min-content, 5rem) repeat(4,min-content);
-    grid-template-columns: [full-start] 1fr [center-start] repeat(6,[col-start] minmax(min-content, 12.5%) [col-end]) [center-end] 1fr [full-end];
+    grid-template-rows: 92vh min-content repeat(4, minmax(min-content, max-content));
+    grid-template-columns: [full-start] 1fr [center-start] repeat(6,[col-start] minmax(min-content, max-content) [col-end]) [center-end] 1fr [full-end];
     
 }
 
