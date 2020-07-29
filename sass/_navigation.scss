@@ -1,59 +1,101 @@
-.navigation {
-    background-color: $color-purple;
+.nav {
+    background: transparent;
     grid-row: 2/3;
     grid-column: full-start/full-end;
     position: sticky;
     top: 0; 
-    z-index: 20;
+    z-index: 10;
     
-}
+    &__container {
 
-.nav-container {
-    height: 100%;
-    background: rgba($color-purple, 1);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 5rem;
-    padding: 2rem 5%;
-    flex-wrap: wrap;
-
-}
-
-
-.nav-item {
-    list-style: none;
-    text-align: center;
-    color: rgba($color-white, 1.0);
-    border-radius: 50px;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background: transparent;
-    font-family: $font-secondary;
-    font-size: $font-small;
-    font-weight: 400;
-    transition: all .1s ;
-    padding: 1rem 3rem;
-    // margin: 0 3rem;
-    backface-visibility: hidden;
-    box-shadow: -5px -5px 7px rgba($color-purple-light, .15),
-                -4px -4px 7px rgba($color-purple-light, .15),
-                 5px 5px 7px rgba(0, 0, 0, .15);
-
-    &:active {
-        box-shadow: inset -5px -5px 7px rgba($color-purple-light, .2),
-            inset -4px -4px 7px rgba($color-purple-light, .2),
-            inset 5px 5px 7px rgba(0, 0, 0, .15);
+        background: rgba($color-purple, 1);
+        background: linear-gradient(to bottom, rgba($color-purple, 1.0) 0%,
+                                               rgba($color-purple, 1.0) 80%,
+                                               rgba($color-purple, .8) 90%,
+                                               transparent 100%);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 5rem;
+        padding: 2rem 5%;
+        flex-wrap: wrap;
+        transition: all .5s;
+        @media only screen and (max-width: $bp-medium) {
+            gap: 3rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+            justify-content: space-evenly;
+            gap: 2rem;
+        }
+    
+    }
+    &__container a,
+    &__container a:any-link{        
+            opacity: 1;
+            color: whitesmoke;
+            text-decoration: none;
+        
+    }
+    &__link{
+        @media only screen and (max-width: $bp-small) {
+            display: none;           
+            
+        }
+    }
+    
+    
+    &__item {
+        list-style: none;
+        text-align: center;
+        color: rgba($color-white, 1.0);
+        border-radius: 50px;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: transparent;
+        font-family: $font-secondary;
+        font-size: $font-small;
         font-weight: 400;
-        color: $color-purple-lighter;
+        padding: 1rem 3rem;
+        // margin: 0 3rem;
+        backface-visibility: hidden;
+        box-shadow: -4px -4px 7px rgba($color-purple-light, .15),
+                    -4px -4px 7px rgba($color-purple-light, .15),
+                     5px 5px 7px rgba(0, 0, 0, .15);
+                     
+                    @media only screen and (max-width: $bp-medium) {
+                         padding: 1rem 2rem; 
+                    }
+    
+                    @media only screen and (max-width: $bp-small) {
+                         padding: 1.2rem; 
+                    }
+    
+        // &:active {
+        
+        // }
+        
+        &:hover {
+            box-shadow: inset -5px -5px 7px rgba($color-purple-light, .2),
+                inset -4px -4px 7px rgba($color-purple-light, .2),
+                inset 5px 5px 7px rgba(0, 0, 0, .15);
+            font-weight: 400;
+            color: $color-purple-lighter;
+            
+            
+        }
+        
     }
-
-    &:hover {
-        transform: scale(.95) translateY(-1px);
-        // font-weight: 400;
+    &__icon{
+        display: none;     
+              
+        @media only screen and (max-width: $bp-small) {
+            opacity: 1;
+            display: block;
+            height: 2.5rem;
+            width: 2.5rem;
+            fill: rgba($color-platinium, .7);
+            
+        }
     }
-
-
-
 }

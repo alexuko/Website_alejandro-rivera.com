@@ -81,6 +81,12 @@ $bp-small: 37.5em; //600/16px = 50
 $padding-big: 10rem;
 $padding-med: 7rem;
 
+// MEDIA QUERIES BREAK POINTS
+$bp-largest: 75em; //1200/16px = 75
+$bp-large: 62.5em; //1000/16px = 62.5
+$bp-medium: 43.75em; //700/16px = 43.75
+$bp-small: 37.5em; //600/16px = 50
+
 html{
     box-sizing: border-box;
     font-size: 62.5%;// 10px / 16px = 62.5% => 1rem = 10px  
@@ -114,7 +120,7 @@ body{
 .main__container{
 
     display: grid;
-    grid-template-rows: 92vh min-content repeat(4, minmax(min-content, max-content));
+    grid-template-rows: 88vh minmax(12vh, min-content) repeat(4, minmax(min-content, max-content));
     grid-template-columns: [full-start] 1fr [center-start] repeat(6,[col-start] minmax(min-content, max-content) [col-end]) [center-end] 1fr [full-end];
     
 }
