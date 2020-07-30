@@ -14,6 +14,26 @@
 
 <body>
     <main class="main__container">
+        <!-- NAVIGATION -->
+        <nav class="nav">
+            <div class="nav__logo">
+                <svg class="nav__logo--arrow-back">
+                    <use xlink:href="img/svg/sprite.svg#icon-arrow_forward_ios"></use>
+                </svg>
+                <div class="nav__logo--middle">A</div>
+                <svg class="nav__logo--arrow-front">
+                    <use xlink:href="img/svg/sprite.svg#icon-arrow_forward_ios"></use>
+                </svg>
+
+            </div>
+            <ul class="nav__container ">
+                <li><a href="#about" class="nav__item ">about</a></li>
+                <li><a href="#projects" class="nav__item ">projects</a></li>
+                <li><a href="#skills" class="nav__item ">skills</a></li>
+                <li><a href="#contact" class="nav__item ">contact</a></li>
+            </ul>
+        </nav>
+
         <!-- HEADER  -->
         <header class="header">
             <div class="hexagons-box" id="hexagons-box">
@@ -290,44 +310,6 @@
             </div>
         </header>
 
-        <!-- NAVIGATION -->
-        <nav class="nav">
-            <ul class="nav__container ">
-                <a href="#about">
-                    <li class="nav__item">
-                        <div class="nav__link">about</div>
-                        <svg class="nav__icon">
-                            <use xlink:href="img/svg/sprite.svg#icon-user"></use>
-                        </svg>
-                    </li>
-                </a>
-                <a href="#projects">
-                    <li class="nav__item">
-                        <div class="nav__link">projects</div>
-                        <svg class="nav__icon">
-                            <use xlink:href="img/svg/sprite.svg#icon-suitcase"></use>
-                        </svg>
-                    </li>
-                </a>
-                <a href="#skills">
-                    <li class="nav__item">
-                        <div class="nav__link">skills</div>
-                        <svg class="nav__icon">
-                            <use xlink:href="img/svg/sprite.svg#icon-embed2"></use>
-                        </svg>
-                    </li>
-                </a>
-                <a href="#contact">
-                    <li class="nav__item">
-                        <div class="nav__link">contact</div>
-                        <svg class="nav__icon">
-                            <use xlink:href="img/svg/sprite.svg#icon-paper-plane"></use>
-                        </svg>
-                    </li>
-                </a>
-                
-            </ul>
-        </nav>
 
         <!-- ABOUT  -->
         <section class="about" id="about">about</section>
@@ -665,8 +647,9 @@
                             <label class="form__label" for="email">E-mail</label>
                     </div>
                     <div class="form__group form__group--3">
-                        <textarea class="form__input" type="message" id="message" name="Message" placeholder="Message here . . ." /required></textarea> </div> 
-                    <div class="form__group form__group--4">
+                        <textarea class="form__input" type="message" id="message" name="Message"
+                            placeholder="Message here . . ." /required> </textarea> </div> <div
+                            class="form__group form__group--4">
                         <input class="form__btn" type="submit" value="Submit">      
                     </div>                    
                 </form>               

@@ -1,101 +1,93 @@
 .nav {
-    background: transparent;
-    grid-row: 2/3;
+    background: rgba(0, 0, 0, .6);
+    grid-row: 1/2;
     grid-column: full-start/full-end;
-    position: sticky;
-    top: 0; 
+    top: 0;
     z-index: 10;
-    
-    &__container {
 
-        background: rgba($color-purple, 1);
-        background: linear-gradient(to bottom, rgba($color-purple, 1.0) 0%,
-                                               rgba($color-purple, 1.0) 80%,
-                                               rgba($color-purple, .8) 90%,
-                                               transparent 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
+
+    }
+
+
+    &__logo {
+        margin-left: 3rem;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
-        gap: 5rem;
-        padding: 2rem 5%;
-        flex-wrap: wrap;
-        transition: all .5s;
-        @media only screen and (max-width: $bp-medium) {
-            gap: 3rem;
-        }
-        @media only screen and (max-width: $bp-small) {
-            justify-content: space-evenly;
-            gap: 2rem;
-        }
-    
-    }
-    &__container a,
-    &__container a:any-link{        
-            opacity: 1;
-            color: whitesmoke;
-            text-decoration: none;
-        
-    }
-    &__link{
-        @media only screen and (max-width: $bp-small) {
-            display: none;           
-            
-        }
-    }
-    
-    
-    &__item {
-        list-style: none;
-        text-align: center;
-        color: rgba($color-white, 1.0);
-        border-radius: 50px;
-        cursor: pointer;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        background: transparent;
-        font-family: $font-secondary;
-        font-size: $font-small;
-        font-weight: 400;
-        padding: 1rem 3rem;
-        // margin: 0 3rem;
-        backface-visibility: hidden;
-        box-shadow: -4px -4px 7px rgba($color-purple-light, .15),
-                    -4px -4px 7px rgba($color-purple-light, .15),
-                     5px 5px 7px rgba(0, 0, 0, .15);
-                     
-                    @media only screen and (max-width: $bp-medium) {
-                         padding: 1rem 2rem; 
-                    }
-    
-                    @media only screen and (max-width: $bp-small) {
-                         padding: 1.2rem; 
-                    }
-    
-        // &:active {
-        
-        // }
-        
-        &:hover {
-            box-shadow: inset -5px -5px 7px rgba($color-purple-light, .2),
-                inset -4px -4px 7px rgba($color-purple-light, .2),
-                inset 5px 5px 7px rgba(0, 0, 0, .15);
+        color: rgba($color-platinium, 1.0);
+
+
+        &--middle {
+            // background: lightsalmon;
+            font-size: $font-huge;
             font-weight: 400;
-            color: $color-purple-lighter;
-            
-            
+            font-family: $font-secondary;
+
         }
-        
+
+        &--arrow-back {
+            transform: rotate(180deg);
+        }
+
+        &--arrow-front,
+        &--arrow-back {
+            height: 40px;
+            width: 40px;
+            fill: currentColor;
+        }
+
     }
-    &__icon{
-        display: none;     
-              
-        @media only screen and (max-width: $bp-small) {
-            opacity: 1;
-            display: block;
-            height: 2.5rem;
-            width: 2.5rem;
-            fill: rgba($color-platinium, .7);
-            
+
+    &__container {
+        list-style: none;
+        display: flex;
+
+    }
+
+    &__item {
+        margin: 1rem;
+        color: $color-platinium;
+        text-decoration: none;
+        font-size: $font-small;
+        font-family: $font-tertiary;
+        font-weight: 400;
+        letter-spacing: .6rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        transition-duration: .2s;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 80%;
+            bottom: 0;
+            left: 10%;
+            border-radius: 10px;
+            transform: scale(0);
+            transition: all .6s;
+            background: $color-platinium;
+
+        }
+
+        &:hover,
+        &:active {
+
+            &::before {
+                transform: scale(1);
+            }
         }
     }
+
 }

@@ -120,8 +120,8 @@ body{
 .main__container{
 
     display: grid;
-    grid-template-rows: 88vh minmax(12vh, min-content) repeat(4, minmax(min-content, max-content));
     grid-template-columns: [full-start] 1fr [center-start] repeat(6,[col-start] minmax(min-content, max-content) [col-end]) [center-end] 1fr [full-end];
+    grid-template-rows: 11vh 90vh  repeat(4, minmax(min-content, max-content));
     
 }
 
