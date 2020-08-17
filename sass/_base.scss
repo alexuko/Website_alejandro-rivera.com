@@ -1,36 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,558;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 // COLORS
 
-$color-orange: #FB8F37;
+// $color-orange: #FB8F37;
 
-$color-mustard: #F5D451;
-$color-buff: #F8E28B;
-$color-lemon-meringue: #FCF1C5;
+// $color-mustard: #F5D451;
+// $color-buff: #F8E28B;
+// $color-lemon-meringue: #FCF1C5;
 
-$color-ruby: #D81159;
-$color-fiery-rose: #FC5F67;
-$color-cyclamen: #F47CA8;
-$color-fuchsia-rose: #C4457A;
-$color-french-rose: #F04282;
-$color-salmon-pink: #FD9BA0;
+// $color-fiery-rose: #FC5F67;
+// $color-cyclamen: #F47CA8;
+// $color-fuchsia-rose: #C4457A;
+// $color-french-rose: #F04282;
+// $color-salmon-pink: #FD9BA0;
 
-$color-quinacridone-magenta: #8F2D56;
-$color-dark-slate-blue: #3C438D;
-$color-uranian-blue: #B9DEFE;
-$color-iris: #4B57D2;
-$color-persian-indigo: #320D6D;
-$color-electric-indigo: #6E24E5;
-$color-uranian-blue: #AAD7EE;
-$color-celadon-green: #218380;
-$color-tiffany-green: #2DB4AF;
+// $color-quinacridone-magenta: #8F2D56;
+// $color-dark-slate-blue: #3C438D;
+// $color-uranian-blue: #B9DEFE;
+// $color-iris: #4B57D2;
+// $color-persian-indigo: #320D6D;
+// $color-uranian-blue: #AAD7EE;
+// $color-celadon-green: #218380;
+// $color-tiffany-green: #2DB4AF;
 
-$color-davis-grey: #5E5E5A;
-$color-spanish-grey: #9A9998;
-$color-silver: #C2C2C1;
+// $color-davis-grey: #5E5E5A;
+// $color-spanish-grey: #9A9998;
 
 //////////////////////////////////
 /// COLORS 
 
 // font colors
+$color-silver: #C2C2C1;
 $color-sonic-silver: #707070;
 $color-raisin-black: #29282A;
 $color-platinium: #ECECEB;
@@ -45,11 +45,13 @@ $color-purple-lightest: #F3EDFD;
 $color-white: #FFFFFF;
 $color-tangerine: #F58B00;
 $color-red-salsa: #FB3640;
+$color-ruby: #D81159;
 $color-celeste: #9DE7E4;
 $color-medium-turquoise: #3ACFCA;
 $color-blue-sapphire: #175676;
 $color-indigo-dye: #144B66;
 $color-indigo-dye-dark: #103F56;
+$color-electric-indigo: #6E24E5;
 
 //////////////////////////////////
 /// FONT FAMILIES 
@@ -61,7 +63,9 @@ $font-tertiary: 'Montserrat', sans-serif;
 //////////////////////////////////
 /// FONT SIZES 
  
-$font-small: 1rem;
+
+$font-mini: 1rem;
+$font-small: 1.3rem;
 $font-med: 1.6rem;
 $font-large: 2.2rem;
 $font-big: 2.8rem;
@@ -71,34 +75,29 @@ $font-massive: 4rem;
 //////////////////////////////////
 /// MEDIA QUERIES BREAK POINTS
 
-$bp-largest: 75em; //1200/16px = 75
+$bp-largest: 87.5em; //1400/16px = 87.5
+$bp-big: 75em; //1200/16px = 75
 $bp-large: 62.5em; //1000/16px = 62.5
-$bp-medium: 50em; //800/16px = 50
-$bp-small: 37.5em; //600/16px = 50
+$bp-medium: 50.0em; //800/16px = 50.0
+$bp-small: 37.5em; //600/16px = 37.5
+$bp-mini: 21.87em; //350/16px = 21.87
 
 //////////////////////////////////
 /// PADDINGS 
 $padding-big: 10rem;
 $padding-med: 7rem;
 
-// MEDIA QUERIES BREAK POINTS
-$bp-largest: 75em; //1200/16px = 75
-$bp-large: 62.5em; //1000/16px = 62.5
-$bp-medium: 43.75em; //700/16px = 43.75
-$bp-small: 37.5em; //600/16px = 50
 
 html{
     box-sizing: border-box;
     font-size: 62.5%;// 10px / 16px = 62.5% => 1rem = 10px  
+    scroll-behavior: smooth;
 }
 
 *,*::after,*::before{
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
-    font-family: $font-secondary;
-    
-    
+    box-sizing: inherit;    
 }
 
 ::selection{
@@ -114,17 +113,25 @@ body{
     line-height: 1.6;
     letter-spacing: 1.5px;
     color: $color-platinium;
+    font-family: $font-secondary;
+
+    
 
 }
 
 .main__container{
-
     display: grid;
     grid-template-columns: [full-start] 1fr [center-start] repeat(6,[col-start] minmax(min-content, max-content) [col-end]) [center-end] 1fr [full-end];
-    grid-template-rows: 11vh 90vh  repeat(4, minmax(min-content, max-content));
-    
+    grid-template-rows: 8vh 92vh repeat(4, minmax(auto, max-content));
+    position: relative;
 }
 
+///////////
+// HEXAGON SHAPE
+
+.hex-shape {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
 ///////////
 // BTN
 .btn{
@@ -169,9 +176,7 @@ body{
         &:hover{
             stroke-dasharray: 100,400;
             stroke-dashoffset: 272;
-            // stroke-dasharray: 100;
-            // stroke-dashoffset: 75;
-            stroke: rgba($color-electric-indigo, .7);
+            stroke: rgba($color-electric-indigo, .6);
         }
 
     }

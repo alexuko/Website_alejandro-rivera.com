@@ -2,12 +2,22 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175575724-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-175575724-1');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Raleway:wght@200;400;500&family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -16,303 +26,601 @@
     <main class="main__container">
         <!-- NAVIGATION -->
         <nav class="nav">
+            <!-- LOGO  -->
+            <!-- logomaker.thehoth.com/?project=45900930  -->
             <div class="nav__logo">
-                <svg class="nav__logo--arrow-back">
-                    <use xlink:href="img/svg/sprite.svg#icon-arrow_forward_ios"></use>
-                </svg>
-                <div class="nav__logo--middle">A</div>
-                <svg class="nav__logo--arrow-front">
-                    <use xlink:href="img/svg/sprite.svg#icon-arrow_forward_ios"></use>
-                </svg>
-
+                <a href="#header" class="logo__link ">
+                    <img src="./img/logo/logo.png" alt="" class="logo__icon">
+                    <!-- <svg class="logo__icon">
+                        <use xlink:href="img/logo/logo.svg#logo"></use>
+                    </svg> -->
+                </a>
             </div>
-            <ul class="nav__container ">
-                <li><a href="#about" class="nav__item ">about</a></li>
-                <li><a href="#projects" class="nav__item ">projects</a></li>
-                <li><a href="#skills" class="nav__item ">skills</a></li>
-                <li><a href="#contact" class="nav__item ">contact</a></li>
+
+            <!-- LINKS LIST -->
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#about" class="nav__link ">about</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link ">projects</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link ">skills</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link ">contact</a></li>
             </ul>
+            <!-- TOGGLER -->
+            <div class="nav__toggler">
+                <span class="line line--1"></span>
+                <span class="line line--2"></span>
+                <span class="line line--3"></span>
+            </div>
         </nav>
 
         <!-- HEADER  -->
-        <header class="header">
+        <header class="header" id="header">
+            <div class="header__title">
+                <div class="header__title--text">
+                    Hi! My name is <span>Alejandro Rivera</span><br>I'm a Software Developer
+                </div>
+            </div>
             <div class="hexagons-box" id="hexagons-box">
                 <div class="row">
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
                 </div>
                 <div class="row">
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
                 </div>
                 <div class="row">
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
                 </div>
                 <div class="row">
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
                 </div>
                 <div class="row">
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
                 </div>
                 <div class="row">
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
                 </div>
                 <div class="row">
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
                 </div>
                 <div class="row">
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
                 </div>
                 <div class="row">
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
                 </div>
                 <div class="row">
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
-                    <div class="hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                </div>
+                <div class="row">
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                </div>
+                <div class="row">
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                </div>
+                <div class="row">
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                </div>
+                <div class="row">
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                </div>
+                <div class="row">
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                </div>
+                <div class="row">
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                </div>
+                <div class="row">
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                </div>
+                <div class="row">
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                </div>
+                <div class="row">
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                </div>
+                <div class="row">
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
+                    <div class="hex-shape hexagon"></div>
                 </div>
             </div>
         </header>
 
 
         <!-- ABOUT  -->
-        <section class="about" id="about">about</section>
+        <section class="about" id="about">
+            <div class="about-box">
+                <div class="hex-shape about-box__item about-box__item--1"><span> software developer </span></div>
+                <div class="hex-shape about-box__item about-box__item--2"><span> UX/UI enthusiast<br>open source fan
+                    </span></div>
+                <div class="hex-shape about-box__item about-box__item--3"><span> freelancer </span></div>
+                <div class="hex-shape outter-hex">
+                    <div class="hex-shape about-box__item about-box__item--4"></div>
+                </div>
+                <div class="hex-shape about-box__item about-box__item--5"><span> passionate about web development
+                    </span></div>
+                <div class="hex-shape about-box__item about-box__item--6"><span> based in dublin, ireland </span></div>
+                <div class="hex-shape about-box__item about-box__item--7"><span> I like<br>working-out<br>learning new
+                        things</span></div>
+            </div>
+        </section>
 
         <!-- PROJECTS  -->
         <section class="projects" id="projects">
@@ -321,7 +629,7 @@
                     <!-- CARD FRONT  -->
                     <div class="card__side card__side--front">
                         <div class="card__image card__image--1"> &nbsp; </div>
-                        <div class="card__title">Natours</div>
+                        <div class="card__title">Tracking App</div>
                         <span class="tab tab--lower"></span>
                     </div>
                     <!-- CARD BACK   -->
@@ -329,24 +637,109 @@
                         <span class="tab tab--upper"></span>
                         <div class="project__description">
                             <div class="project__description--top">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officia doloribus non hic
-                                nostrum quis dignissimos velit distinctio saepe mollitia quas modi quod ducimus,
-                                repudiandae fugiat veritatis iusto sint exercitationem?
+                                I made this application with Android, It makes use of the mobile built-in GPS sensor,
+                                getting the user current location in the globe, by gathering coordinates like altitude,
+                                latitude and longitude, as well as current speed these are updated every 5 seconds
+                                creating and displaying a Graph when the activity has finished running. Second Activity
+                                displays useful user info like: min, max, average Speed and Altitude, as well as the
+                                total distance, travelled.
                             </div>
                             <div class="project__description--bottom">
                                 <svg class="project__icon">
-                                    <use xlink:href="img/svg/sprite.svg#icon-html5"></use>
+                                    <use xlink:href="img/svg/sprite.svg#icon-android"></use>
                                 </svg>
                                 <svg class="project__icon">
-                                    <use xlink:href="img/svg/sprite.svg#icon-css3"></use>
+                                    <use xlink:href="img/svg/sprite.svg#icon-java"></use>
                                 </svg>
                                 <svg class="project__icon">
-                                    <use xlink:href="img/svg/sprite.svg#icon-sass"></use>
+                                    <use xlink:href="img/svg/sprite.svg#icon-github"></use>
                                 </svg>
                             </div>
                         </div>
                         <div class="project__btn-box">
-                            <a href="/projects/budgety/index.html" class="btn project__btn">
+                            <a href="https://github.com/alexuko/Tracking_app" class="btn project__btn" target="blank">
+                                <svg>
+                                    <rect></rect>
+                                </svg>
+                                View
+                            </a>
+                        </div>
+                        <span class="tab tab--lower"></span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <!-- CARD FRONT  -->
+                    <div class="card__side card__side--front">
+                        <div class="card__image card__image--1"> &nbsp; </div>
+                        <div class="card__title">Simon Game</div>
+                        <span class="tab tab--lower"></span>
+                    </div>
+                    <!-- CARD BACK   -->
+                    <div class="card__side card__side--back">
+                        <span class="tab tab--upper"></span>
+                        <div class="project__description">
+                            <div class="project__description--top">
+                                Based on the classic 1970’s memory game called Simon. Multiplayer Android app developed
+                                with the elements from the standard SDK to create a full custom view for the main game
+                                controller and a multi-threaded UI for handling touch events and timing.
+                            </div>
+                            <div class="project__description--bottom">
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-android"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-java"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-github"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project__btn-box">
+                            <a href="https://github.com/alexuko/Simon-Game" class="btn project__btn" target="blank">
+                                <svg>
+                                    <rect></rect>
+                                </svg>
+                                View
+                            </a>
+                        </div>
+                        <span class="tab tab--lower"></span>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- CARD FRONT  -->
+                    <div class="card__side card__side--front">
+                        <div class="card__image card__image--1"> &nbsp; </div>
+                        <div class="card__title">Shopping list</div>
+                        <span class="tab tab--lower"></span>
+                    </div>
+                    <!-- CARD BACK   -->
+                    <div class="card__side card__side--back">
+                        <span class="tab tab--upper"></span>
+                        <div class="project__description">
+                            <div class="project__description--top">
+                                This android application was part of one of my college projects which even after
+                                completed I still using it as my personal shopping or ToDo list. Created with Java and
+                                Android Studio. Items are written into the application DB, therefore, changes are
+                                permanent allowing the creation, deletion, modification. and one any change is made a
+                                Toast message will pop-in on the screen notifying the user of any change.
+                            </div>
+                            <div class="project__description--bottom">
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-android"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-java"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-github"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project__btn-box">
+                            <a href="https://github.com/alexuko/Shopping-List-App" class="btn project__btn"
+                                target="blank">
                                 <svg>
                                     <rect></rect>
                                 </svg>
@@ -369,9 +762,10 @@
                         <span class="tab tab--upper"></span>
                         <div class="project__description">
                             <div class="project__description--top">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officia doloribus non hic
-                                nostrum quis dignissimos velit distinctio saepe mollitia quas modi quod ducimus,
-                                repudiandae fugiat veritatis iusto sint exercitationem?
+                                Fully responsive pilot model website created for a fabricated tours company using only
+                                HTML5 and SASS processor. The aim of this project is to make the UX more
+                                friendly, modern and attractive by using advance CSS web design techniques
+                                without the need for using JavaScript.
                             </div>
                             <div class="project__description--bottom">
                                 <svg class="project__icon">
@@ -386,7 +780,7 @@
                             </div>
                         </div>
                         <div class="project__btn-box">
-                            <a href="/projects/fancy-house/index.html" class="btn project__btn">
+                            <a href="./projects/natours/" class="btn project__btn" target="blank">
                                 <svg>
                                     <rect></rect>
                                 </svg>
@@ -401,7 +795,7 @@
                     <!-- CARD FRONT  -->
                     <div class="card__side card__side--front">
                         <div class="card__image card__image--1"> &nbsp; </div>
-                        <div class="card__title">Natours</div>
+                        <div class="card__title">Travel Agency</div>
                         <span class="tab tab--lower"></span>
                     </div>
                     <!-- CARD BACK   -->
@@ -409,9 +803,10 @@
                         <span class="tab tab--upper"></span>
                         <div class="project__description">
                             <div class="project__description--top">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officia doloribus non hic
-                                nostrum quis dignissimos velit distinctio saepe mollitia quas modi quod ducimus,
-                                repudiandae fugiat veritatis iusto sint exercitationem?
+                                Fully responsive model website created for a fabricated travel agency using only HTML5
+                                and SASS processor. The purpose of this project is to create the overall website using
+                                only Flexbox, but at the same time making the UX more friendly, modern and attractive by
+                                using advance CSS web design techniques without the need for using JavaScript.
                             </div>
                             <div class="project__description--bottom">
                                 <svg class="project__icon">
@@ -426,7 +821,131 @@
                             </div>
                         </div>
                         <div class="project__btn-box">
-                            <a href="/projects/travel-agency/index.html" class="btn project__btn">
+                            <a href="./projects/travel-agency/" class="btn project__btn" target="blank">
+                                <svg>
+                                    <rect></rect>
+                                </svg>
+                                View
+                            </a>
+                        </div>
+                        <span class="tab tab--lower"></span>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- CARD FRONT  -->
+                    <div class="card__side card__side--front">
+                        <div class="card__image card__image--1"> &nbsp; </div>
+                        <div class="card__title">Fancy House</div>
+                        <span class="tab tab--lower"></span>
+                    </div>
+                    <!-- CARD BACK   -->
+                    <div class="card__side card__side--back">
+                        <span class="tab tab--upper"></span>
+                        <div class="project__description">
+                            <div class="project__description--top">
+                                Fully responsive pilot model website created for a fabricated tours company using only
+                                HTML5 and SASS processor. The aim of this project is to make the UX more
+                                friendly, modern and attractive by using advance CSS web design techniques
+                                without the need for using JavaScript.
+                            </div>
+                            <div class="project__description--bottom">
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-html5"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-css3"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-sass"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project__btn-box">
+                            <a href="./projects/fancy-house/" class="btn project__btn" target="blank">
+                                <svg>
+                                    <rect></rect>
+                                </svg>
+                                View
+                            </a>
+                        </div>
+                        <span class="tab tab--lower"></span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <!-- CARD FRONT  -->
+                    <div class="card__side card__side--front">
+                        <div class="card__image card__image--1"> &nbsp; </div>
+                        <div class="card__title">budget app</div>
+                        <span class="tab tab--lower"></span>
+                    </div>
+                    <!-- CARD BACK   -->
+                    <div class="card__side card__side--back">
+                        <span class="tab tab--upper"></span>
+                        <div class="project__description">
+                            <div class="project__description--top">
+                                Application-based mainly in JavaScript using the Module pattern. It takes incomes
+                                and expenses for the current month and the app calculates how much the user
+                                has earned and spent in relation to the month. It also allows you to delete items
+                                from the list if a mistake occurs, updating the list of items, their percentages, and
+                                the global budget display.
+                            </div>
+                            <div class="project__description--bottom">
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-html5"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-javascript"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-css3"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project__btn-box">
+                            <a href="./projects/budgety/" class="btn project__btn" target="blank">
+                                <svg>
+                                    <rect></rect>
+                                </svg>
+                                View
+                            </a>
+                        </div>
+                        <span class="tab tab--lower"></span>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- CARD FRONT  -->
+                    <div class="card__side card__side--front">
+                        <div class="card__image card__image--1"> &nbsp; </div>
+                        <div class="card__title">KQR tags</div>
+                        <span class="tab tab--lower"></span>
+                    </div>
+                    <!-- CARD BACK   -->
+                    <div class="card__side card__side--back">
+                        <span class="tab tab--upper"></span>
+                        <div class="project__description">
+                            <div class="project__description--top">
+                                Key System Management based on QR codes. The application reads and stores
+                                data from the QR codes embedded in the keys. Created in PHP, SQL, JavaScript,
+                                HTML, and CSS. Developed under the CRUD functions.
+                            </div>
+                            <div class="project__description--bottom">
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-html5"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-javascript"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-php"></use>
+                                </svg>
+                                <svg class="project__icon">
+                                    <use xlink:href="img/svg/sprite.svg#icon-css3"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project__btn-box">
+                            <a href="https://kqrtags.000webhostapp.com" class="btn project__btn" target="blank">
                                 <svg>
                                     <rect></rect>
                                 </svg>
@@ -457,11 +976,16 @@
                             <div class="skills__card__title">Dev-tools</div>
                         </div>
                         <ul class="skills__card__list">
+                            <li> HTML</li>
+                            <li> CSS</li>
+                            <li> Sass/Scss</li>
+                            <li> React</li>
+                            <li> node</li>
+                            <li> Android</li>
                             <li> git</li>
                             <li> github</li>
                             <li> adobe XD</li>
                             <li> NPM</li>
-                            <li> AWS</li>
 
                         </ul>
                     </div>
@@ -475,16 +999,10 @@
                             <div class="skills__card__title">Languages</div>
                         </div>
                         <ul class="skills__card__list">
-                            <li> JavaScript</li>
-                            <li> React</li>
-                            <li> HTML</li>
-                            <li> CSS</li>
-                            <li> Sass/Scss</li>
-                            <li> node</li>
                             <li> Java</li>
-                            <li> Android</li>
-                            <li> C++</li>
+                            <li> JavaScript</li>
                             <li> PHP</li>
+                            <li> C++</li>
                             <li> Python</li>
                         </ul>
                     </div>
@@ -498,11 +1016,12 @@
                             <div class="skills__card__title">Admin & Networking</div>
                         </div>
                         <ul class="skills__card__list">
+                            <li> AWS</li>
                             <li> Ubuntu</li>
                             <li> SQL</li>
+                            <li> PHPmyAdmin</li>
                             <li> TCP/IP</li>
                             <li> SSH</li>
-                            <li> PHPmyAdmin</li>
                         </ul>
                     </div>
                 </div>
@@ -637,7 +1156,7 @@
                 <!-- FOOTER TITLE  -->
                 <div class="form__title" id="contact">Contact</div>
                 <!-- FOOTER FORM  -->
-                <form class="form" action="#">
+                <form class="form" action="https://formspree.io/alejandro.rivera.m18@gmail.com" method="POST">
                     <div class="form__group form__group--1">
                         <input class="form__input" type="text" id="name" name="name" placeholder="Name" /required>
                             <label class="form__label" for="name">Name</label>
@@ -648,9 +1167,9 @@
                     </div>
                     <div class="form__group form__group--3">
                         <textarea class="form__input" type="message" id="message" name="Message"
-                            placeholder="Message here . . ." /required> </textarea> </div> <div
+                            placeholder="Message here..." /required> </textarea> </div> <div
                             class="form__group form__group--4">
-                        <input class="form__btn" type="submit" value="Submit">      
+                        <input class="form__btn" type="submit" value="Submit">
                     </div>                    
                 </form>               
             </div>
@@ -659,22 +1178,22 @@
             <div class="social">
                 <!-- FOOTER ICONS  -->
                 <div class="social__icon-box">
-                    <a href="#" class="social__icon-box--link" target="blank">
+                    <a href="https://www.linkedin.com/in/alejandro-rivera-mejia" class="social__icon-box--link" target="blank">
                         <svg class="social__icon-box--item">
                             <use xlink:href="img/svg/sprite.svg#icon-linkedin"></use>
                         </svg>                
                     </a>
-                    <a href="#" class="social__icon-box--link" target="blank">
+                    <a href="https://github.com/alexuko" class="social__icon-box--link" target="blank">
                         <svg class="social__icon-box--item">
                             <use xlink:href="img/svg/sprite.svg#icon-github"></use>
                         </svg>                
                     </a>
-                    <a href="#" class="social__icon-box--link" target="blank">
+                    <a href="https://codepen.io/alexuko/" class="social__icon-box--link" target="blank">
                         <svg class="social__icon-box--item">
                             <use xlink:href="img/svg/sprite.svg#icon-codepen"></use>
                         </svg>                
                     </a>
-                    <a href="https://google.com" class="social__icon-box--link" target="blank">
+                    <a href="mailto:alejandro.rivera.m18@gmail.com" class="social__icon-box--link" target="blank">
                         <svg class="social__icon-box--item">
                             <use xlink:href="img/svg/sprite.svg#icon-envelope"></use>
                         </svg>             

@@ -4,29 +4,70 @@
     grid-column: full-start/full-end;
     
     display: grid;
-    grid-template-columns: 1fr [mid-start] repeat(3, minmax(max-content, 1fr)) [mid-end]  1fr;
-    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    // grid-template-columns: 1fr [mid-start] repeat(3, minmax(max-content, 1fr)) [mid-end]  1fr;
+    grid-template-columns: 1fr [mid-start] repeat(3,  1fr) [mid-end]  1fr;
+    // grid-template-rows: repeat(2, minmax(min-content, max-content));
+    grid-template-rows: repeat(2, max-content);
     gap: 2rem;
     justify-items: center;
-
+    
 }
 
 .form-container {
-    padding: $padding-med 0;
+    margin: 5rem 0;
     grid-row: 1/2;
     grid-column: mid-start / mid-end;
+    position: relative;
+    z-index: 5;
+
+    &::before{
+        content:"";
+            position: absolute;
+            background: rgba($color: #000000, $alpha: .5);
+            bottom: 0;
+            left:  0;
+            height: 30px;
+            width: 50%;
+            transform-origin:right;
+            transform: skewy(-6deg);
+            z-index: -1;
+            filter: blur(10px);
+          
+    }
+    &::after{
+        content:"";
+            position: absolute;
+            background: rgba($color: #000000, $alpha: .5);
+            bottom: 0;
+            right:  0;
+            height: 30px;
+            width: 50%;
+            transform-origin:left;
+            transform: skewy(6deg);
+            z-index: -1;
+            filter: blur(10px);
+          
+    }
+
+
 }
 
 .form {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
+    background: $color-indigo-dye;
     border-radius: 5px;
-    box-shadow: -7px 7px 1.5rem rgba(#000000, .7);
+    box-shadow: 0 -1px .5rem rgba(#000000, .3);
     border: 2px solid rgba($color-blue-sapphire, .4);
     padding: 3rem 7% 1.5rem;
     width: 90vw;
-    max-width: 40rem;
+    max-width: 50rem;
+
+    
+    
+    
+    
+
 
     &__title {
 
@@ -115,6 +156,7 @@
         max-width: 100%;
         min-height: 10rem;
         max-height: 20rem;
+        
     }
 
     &__btn,
