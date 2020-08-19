@@ -5,8 +5,6 @@
   position: relative;
 }
 
-
-
 .hexagons-box {
   background: black;
   position: relative;
@@ -15,7 +13,11 @@
   animation: change-color 4s linear infinite;
   // z-index: 1;
 }
-
+noscript{
+  text-align: center;
+  font-size: $font-huge;
+  color: $color-tangerine;
+}
 .header__title {
   position: absolute;
   top: 50%;
@@ -26,29 +28,29 @@
 
   &--text {
     color: rgba($color-platinium, 1.0);
-    font-size: $font-med;
-    font-family: $font-primary;
+    font-size: $font-large;
+    font-family: $font-tertiary;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
-    letter-spacing: .7rem;
+    // letter-spacing: .5rem;
     white-space: normal;
     pointer-events: none;
 
     
     @media only screen and (max-width: $bp-mini) {
-      font-size: $font-mini;
+      font-size: $font-med;
     }
     
     
-    @media only screen and (min-width: $bp-big) {
-      font-size: $font-large;
+    @media only screen and (min-width: $bp-medium) {
+      font-size: $font-big;
       
     }
     
     @media only screen and (min-width: $bp-largest) {
-      font-size: $font-huge;
-      // font-size: $font-massive;
+      // font-size: $font-huge;
+      font-size: $font-massive;
       
     }
 
@@ -75,7 +77,6 @@
 
 
 .row {
-
   display: inline-flex;
   z-index: 6;
   margin-top: -30px;
@@ -95,7 +96,6 @@
 
   margin: 2px;
   transition: 2s;
-  cursor: pointer;
 
   &:hover {
     transition: 0s;

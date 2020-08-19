@@ -29,7 +29,7 @@
     }
 
     .logo__icon{
-        height: 7vh;
+        height: 3vh;
 
     }
 
@@ -55,9 +55,9 @@
         .nav__link {
             color: $color-platinium;
             text-decoration: none;
-            font-size: $font-small;
+            font-size: $font-med;
             font-family: $font-tertiary;
-            font-weight: 400;
+            font-weight: 500;
             letter-spacing: .3rem;
             text-transform: uppercase;
             transition-duration: .2s;
@@ -113,6 +113,7 @@
         z-index: 50;        
         
     }
+
     .nav__toggler:hover .line {
         width: 3rem;
     }
@@ -142,35 +143,34 @@
         clip-path: circle(30px at 95% -10%);
         transition: all .5s ease-in-out;
         pointer-events: none;
-        
         background: rgba($color-indigo-dye-dark, .9);
         
         @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
-
+        
     }
-
+    
     .nav__list.open {
         -webkit-clip-path: circle(150vh at 95% -10%);
         clip-path: circle(150vh at 95% -10%);
         pointer-events: all;
     }
-
-
+    
+    
     .nav__item {
         opacity: 0;
-
     }
-
+    
     .nav__item.fade {
         opacity: 1;
-    }
 
+    }
+    
 
     .nav__link {
-        font-size: $font-large !important;
+        font-size: $font-big !important;
     }
 
     .nav__item:nth-child(1) {

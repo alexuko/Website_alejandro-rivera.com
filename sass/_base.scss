@@ -1,30 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,558;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-// COLORS
-
-// $color-orange: #FB8F37;
-
-// $color-mustard: #F5D451;
-// $color-buff: #F8E28B;
-// $color-lemon-meringue: #FCF1C5;
-
-// $color-fiery-rose: #FC5F67;
-// $color-cyclamen: #F47CA8;
-// $color-fuchsia-rose: #C4457A;
-// $color-french-rose: #F04282;
-// $color-salmon-pink: #FD9BA0;
-
-// $color-quinacridone-magenta: #8F2D56;
-// $color-dark-slate-blue: #3C438D;
-// $color-uranian-blue: #B9DEFE;
-// $color-iris: #4B57D2;
-// $color-persian-indigo: #320D6D;
-// $color-uranian-blue: #AAD7EE;
-// $color-celadon-green: #218380;
-// $color-tiffany-green: #2DB4AF;
-
-// $color-davis-grey: #5E5E5A;
-// $color-spanish-grey: #9A9998;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,558;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&Roboto:wght@500;700;900&display=swap');
 
 //////////////////////////////////
 /// COLORS 
@@ -51,18 +25,24 @@ $color-medium-turquoise: #3ACFCA;
 $color-blue-sapphire: #175676;
 $color-indigo-dye: #144B66;
 $color-indigo-dye-dark: #103F56;
+$color-indigo-dye-dark: rgb(16, 63, 86);
 $color-electric-indigo: #6E24E5;
 
 //////////////////////////////////
 /// FONT FAMILIES 
 
-$font-primary: 'Raleway', sans-serif;
-$font-secondary: 'Ubuntu', sans-serif;
-$font-tertiary: 'Montserrat', sans-serif;
+$font-primary: 'Raleway',
+sans-serif;
+$font-secondary: 'Ubuntu',
+sans-serif;
+$font-tertiary: 'Montserrat',
+sans-serif;
+$font-landing: 'Roboto',
+sans-serif;
 
 //////////////////////////////////
 /// FONT SIZES 
- 
+
 
 $font-mini: 1rem;
 $font-small: 1.3rem;
@@ -88,26 +68,31 @@ $padding-big: 10rem;
 $padding-med: 7rem;
 
 
-html{
+html {
     box-sizing: border-box;
-    font-size: 62.5%;// 10px / 16px = 62.5% => 1rem = 10px  
+    font-size: 62.5%; // 10px / 16px = 62.5% => 1rem = 10px  
     scroll-behavior: smooth;
+
+
+
 }
 
-*,*::after,*::before{
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;    
+    box-sizing: inherit;
 }
 
-::selection{
-    background-color: $color-tangerine; 
+::selection {
+    background-color: $color-tangerine;
     color: $color-white;
     font-weight: 400;
-    
- }
 
-body{
+}
+
+body {
     // font-family: $font-secondary;
     font-weight: 400;
     line-height: 1.6;
@@ -115,43 +100,93 @@ body{
     color: $color-platinium;
     font-family: $font-secondary;
 
-    
+
 
 }
 
-.main__container{
+.main__container {
     display: grid;
-    grid-template-columns: [full-start] 1fr [center-start] repeat(6,[col-start] minmax(min-content, max-content) [col-end]) [center-end] 1fr [full-end];
-    grid-template-rows: 8vh 92vh repeat(4, minmax(auto, max-content));
+    grid-template-columns: [full-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, max-content) [col-end]) [center-end] 1fr [full-end];
+    grid-template-rows: 10vh 90vh repeat(4, minmax(auto, max-content));
     position: relative;
 }
 
-///////////
+/////////////////
 // HEXAGON SHAPE
 
 .hex-shape {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  }
+}
+
+/////////////////
+// TITLE
+.section__title {
+
+    color: rgba($color-platinium, .8);
+    font-family: $font-tertiary;
+    font-weight: 600;
+    font-size: $font-large;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 22.5%;
+        width: 55%;
+        height: 1.5px;
+        background: rgba($color-platinium, .3);
+        transform: scaleX(.6);
+    }
+}
+.title-color--indigo{
+    color: rgba($color-indigo-dye-dark, .7);
+    &::after{
+        background:rgba($color-indigo-dye-dark, .3);
+
+    }
+}
+
+.title-color--tangerine{
+    color: rgba($color-tangerine, .7);
+    &::after{
+        background:rgba($color-tangerine, .3);
+
+    }
+}
+
+.title-color--salsa{
+    color: rgba($color-red-salsa, .7);
+    &::after{
+        background:rgba($color-red-salsa, .3);
+
+    }
+}
+
 ///////////
 // BTN
-.btn{
+.btn {
     // background: orangered;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);//align it exactly in the middle
+    transform: translate(-50%, -50%); //align it exactly in the middle
     width: 15rem;
     height: 5rem;
     text-align: center;
     line-height: 5rem;
     font-family: $font-secondary;
-    font-size: $font-large;
+    font-size: $font-med;
     text-decoration: none;
     letter-spacing: 2px;
     color: $color-ruby;
     transition-duration: .2s;
-    &:hover{
-        font-size: $font-big;
+
+    &:hover {
+        font-size: $font-large;
     }
 
     & svg,
@@ -162,19 +197,19 @@ body{
         width: 100%;
         height: 100%;
         fill: transparent;
-        
+
     }
 
     & svg rect {
         stroke: $color-ruby;
         stroke-width: 5;
         transition: .5s;
-        stroke-dasharray: 500,500;
+        stroke-dasharray: 500, 500;
         stroke-dashoffset: 0;
 
-        
-        &:hover{
-            stroke-dasharray: 100,400;
+
+        &:hover {
+            stroke-dasharray: 100, 400;
             stroke-dashoffset: 272;
             stroke: rgba($color-electric-indigo, .6);
         }

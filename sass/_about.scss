@@ -7,8 +7,8 @@
 
 .about-box {
     display: grid;
-    grid-template-rows: repeat(3, minmax(12rem, 16vw));
-    grid-template-columns: minmax(.5rem, 1fr) repeat(3, minmax(12rem, 16vw)) minmax(.5rem, 1fr);
+    grid-template-rows: repeat(3, minmax(8.5rem, 15vw));
+    grid-template-columns: minmax(1rem, 1fr) repeat(3, minmax(8.5rem, 15vw)) minmax(1rem, 1fr);
     gap: 4vw;
     justify-content: center;
     align-items: center;
@@ -26,8 +26,8 @@
         background-color: rgba($color: #000000, $alpha: .15);
     }
 
-    
-    .outter-hex{
+
+    .outter-hex {
         grid-column: 3/4;
         grid-row: 2/3;
         height: 100%;
@@ -36,6 +36,7 @@
         transform: scale(1);
 
     }
+
     &__item {
         height: 100%;
         width: 100%;
@@ -46,35 +47,34 @@
         padding: 7%;
         position: relative;
 
-        @media only screen and (max-width: $bp-medium) {
-            
-        }
+        @media only screen and (max-width: $bp-medium) {}
 
         & span {
             text-align: center;
             text-transform: capitalize;
-            font-family: $font-tertiary;
-            color: $color-platinium;
+            font-family: $font-secondary;
+            color: $color-white;
             font-weight: 400;
-            letter-spacing: 5px;
+            letter-spacing: 0;
+            line-height: 1;
             font-size: $font-mini;
-            line-height: 1.2;
             
-            @media only screen and (max-width: $bp-medium) {
-                font-size: $font-mini;
-                letter-spacing: 2px;
-                font-weight: 200;
-                
-                
+            
+            @media only screen and (min-width: $bp-small) {
+                font-size: $font-small;
+            }
+            
+            @media only screen and (min-width: $bp-medium) {
+                font-size: $font-med;
+                line-height: 1.2;
             }
 
             @media only screen and (min-width: $bp-large) {
-                font-size: $font-med;
+                font-size: $font-large;                
             }
-
+            
             @media only screen and (min-width: $bp-largest) {
-                font-size: $font-large;
-                line-height: 1.6;
+                font-size: $font-big;                
             }
         }
 
@@ -96,7 +96,7 @@
             grid-row: 2/3;
         }
 
-        
+
 
         &--4 {
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, .01) 100%),

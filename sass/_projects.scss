@@ -7,10 +7,10 @@
     &__container {
         // background: grey;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         grid-auto-rows: 50rem;
 
-        column-gap: 7rem;
+        column-gap: 5rem;
         row-gap: 10rem;
         justify-content: center;
         align-items: center;
@@ -65,9 +65,10 @@
         &--front {
             transform: rotateY(0);
         }
-
+        
         &--back {
             transform: rotateY(180deg);
+            
         }
     }
 
@@ -99,15 +100,16 @@
     }
 
     &__title {
-        border: 1px solid rgba($color-tangerine, .5);
+        border: 2px solid rgba($color-tangerine, .5);
         font-family: $font-primary;
-        font-size: $font-large;
+        font-size: $font-med;
         font-weight: 400;
         align-self: center;
         margin: 3rem 0;
         padding: .5rem 3rem;
         position: relative;
         color: $color-sonic-silver;
+        text-transform: capitalize;
 
 
     }
@@ -134,7 +136,11 @@
         display: flex;
         flex-direction: column;
 
+        &--top a {
+            text-decoration: none;
+            text-transform: uppercase;
 
+        }
         &--top {
             // background-color: lightslategray;
             flex: 1;
