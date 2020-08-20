@@ -15,12 +15,13 @@
     transition: all .2s ease-in-out;
     position: sticky;
     top: 0;
+    padding: 0 4rem;
 
     &__logo{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 4rem;
+        // margin-left: 4rem;
         color: $color-platinium;
     }
     .logo__link{
@@ -38,7 +39,7 @@
         min-width: 60%;
         list-style: none;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin-left: auto;
 
         .nav__item {
@@ -48,7 +49,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 1rem;
+            margin: 0 2rem;
 
         }
 
@@ -170,7 +171,7 @@
     
 
     .nav__link {
-        font-size: $font-big !important;
+        font-size: $font-large !important;
     }
 
     .nav__item:nth-child(1) {

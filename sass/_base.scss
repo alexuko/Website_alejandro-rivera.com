@@ -107,7 +107,7 @@ body {
 .main__container {
     display: grid;
     grid-template-columns: [full-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, max-content) [col-end]) [center-end] 1fr [full-end];
-    grid-template-rows: 10vh 90vh repeat(4, minmax(auto, max-content));
+    grid-template-rows: 10vh 90vh repeat(4, minmax(min-content, max-content));
     position: relative;
 }
 
@@ -121,47 +121,52 @@ body {
 /////////////////
 // TITLE
 .section__title {
+    display: none;
 
-    color: rgba($color-platinium, .8);
-    font-family: $font-tertiary;
-    font-weight: 600;
-    font-size: $font-large;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-    position: relative;
-
+    @media only screen and (max-width: $bp-medium) {
+        display: inline-flex;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgba($color-platinium, .8);
+        font-family: $font-tertiary;
+        font-weight: 600;
+        font-size: $font-large;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        position: relative;
+    }
     &::after {
         content: "";
         position: absolute;
         bottom: 0;
-        left: 22.5%;
-        width: 55%;
+        left: -5%;
+        width: 110%;
         height: 1.5px;
         background: rgba($color-platinium, .3);
-        transform: scaleX(.6);
+        
     }
 }
 .title-color--indigo{
-    color: rgba($color-indigo-dye-dark, .7);
+    color: rgba($color-indigo-dye-dark, .8);
     &::after{
-        background:rgba($color-indigo-dye-dark, .3);
+        background:rgba($color-indigo-dye-dark, .4);
 
     }
 }
 
 .title-color--tangerine{
-    color: rgba($color-tangerine, .7);
+    color: rgba($color-tangerine, .8);
     &::after{
-        background:rgba($color-tangerine, .3);
+        background:rgba($color-tangerine, .4);
 
     }
 }
 
 .title-color--salsa{
-    color: rgba($color-red-salsa, .7);
+    color: rgba($color-red-salsa, .8);
     &::after{
-        background:rgba($color-red-salsa, .3);
+        background:rgba($color-red-salsa, .4);
 
     }
 }
