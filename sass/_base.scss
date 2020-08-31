@@ -189,6 +189,7 @@ body {
     letter-spacing: 2px;
     color: $color-ruby;
     transition-duration: .2s;
+    z-index: 10;
 
     &:hover {
         font-size: $font-large;

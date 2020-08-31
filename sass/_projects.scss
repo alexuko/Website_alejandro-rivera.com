@@ -9,12 +9,15 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         grid-auto-rows: 50rem;
-
         column-gap: 5rem;
         row-gap: 10rem;
         justify-content: center;
         align-items: center;
         // align-content: center;
+        
+        @media only screen and (max-width: $bp-small) {
+            grid-auto-rows: 75vh;
+        }
     }
 
 }
@@ -28,19 +31,19 @@
     max-width: 35rem;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
 
 
     &__side {
-        background: rgba($color-white, .6);
+        background: rgba($color-white, 0.85);
         height: inherit;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         // transition: all .85s ease-in-out;
-        transition: all 1.3s cubic-bezier(.12,.12,.3,1.52);
+        transition: all 1.3s cubic-bezier(.12, .12, .3, 1.52);
         backface-visibility: hidden;
         border-radius: 5px;
         display: flex;
@@ -64,19 +67,22 @@
 
         &--front {
             transform: rotateY(0);
+
         }
-        
+
         &--back {
             transform: rotateY(180deg);
-            
+
         }
     }
 
-    &:hover &__side--front {
+    &:hover &__side--front,
+    &__side--front.hover {
         transform: rotateY(-180deg);
     }
 
-    &:hover &__side--back {
+    &:hover &__side--back,
+    &__side--back.hover {
         transform: rotateY(0);
     }
 
@@ -86,16 +92,16 @@
         // object-fit: cover;
         // object-position: right center;
         background-size: cover;
-        background-position: center right;
+        background-position: center;
         // border-radius: 5px 5px 0 0;//same border radius than SIDE
-        background-blend-mode: screen;
+        // background-blend-mode: screen;
 
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         border-radius: 5px 5px 0 0;
 
         &--1 {
-            background-image: linear-gradient(to bottom, rgba($color-tangerine, .7) 0%, rgba($color-white, .01) 100%),
-                url(../img/jpg/project.jpg);
+            background-image: linear-gradient(to bottom, rgba($color-tangerine, .8) 0%, rgba($color-tangerine, .01) 10%, rgba(transparent, 0.0) 100%), url(../img/jpg/project.jpg);
+            background-image: url(../img/jpg/project.jpg);
         }
     }
 
@@ -141,6 +147,7 @@
             text-transform: uppercase;
 
         }
+
         &--top {
             // background-color: lightslategray;
             flex: 1;
@@ -151,6 +158,10 @@
             font-size: $font-med;
             font-weight: 400;
             margin: 1rem 0;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: $font-small;
+            }
 
         }
 

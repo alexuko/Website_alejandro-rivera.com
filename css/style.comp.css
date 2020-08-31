@@ -85,7 +85,8 @@ body {
   text-decoration: none;
   letter-spacing: 2px;
   color: #D81159;
-  transition-duration: .2s; }
+  transition-duration: .2s;
+  z-index: 10; }
   .btn:hover {
     font-size: 2.2rem; }
   .btn svg,
@@ -535,6 +536,8 @@ noscript {
       width: 1rem; }
   .nav__list {
     position: absolute;
+    top: 0;
+    right: 0;
     height: 100vh;
     width: 100%;
     flex-direction: column;
@@ -548,8 +551,8 @@ noscript {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px); } }
   .nav__list.open {
-    -webkit-clip-path: circle(150vh at 95% -10%);
-    clip-path: circle(150vh at 95% -10%);
+    -webkit-clip-path: circle(125vh at 95% -10%);
+    clip-path: circle(125vh at 95% -10%);
     pointer-events: all; }
   .nav__item {
     opacity: 0; }
@@ -579,6 +582,9 @@ noscript {
     row-gap: 10rem;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .projects__container {
+        grid-auto-rows: 75vh; } }
 
 .card {
   -moz-perspective: 180rem;
@@ -591,7 +597,7 @@ noscript {
   left: 50%;
   transform: translate(-50%, -50%); }
   .card__side {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.85);
     height: inherit;
     position: absolute;
     top: 0;
@@ -618,19 +624,19 @@ noscript {
       transform: rotateY(0); }
     .card__side--back {
       transform: rotateY(180deg); }
-  .card:hover .card__side--front {
+  .card:hover .card__side--front, .card__side--front.hover {
     transform: rotateY(-180deg); }
-  .card:hover .card__side--back {
+  .card:hover .card__side--back, .card__side--back.hover {
     transform: rotateY(0); }
   .card__image {
     flex: 1;
     background-size: cover;
-    background-position: center right;
-    background-blend-mode: screen;
+    background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-radius: 5px 5px 0 0; }
     .card__image--1 {
-      background-image: linear-gradient(to bottom, rgba(245, 139, 0, 0.7) 0%, rgba(255, 255, 255, 0.01) 100%), url(../img/jpg/project.jpg); }
+      background-image: linear-gradient(to bottom, rgba(245, 139, 0, 0.8) 0%, rgba(245, 139, 0, 0.01) 10%, rgba(0, 0, 0, 0) 100%), url(../img/jpg/project.jpg);
+      background-image: url(../img/jpg/project.jpg); }
   .card__title {
     border: 2px solid rgba(245, 139, 0, 0.5);
     font-family: "Raleway", sans-serif;
@@ -668,6 +674,9 @@ noscript {
       font-size: 1.6rem;
       font-weight: 400;
       margin: 1rem 0; }
+      @media only screen and (max-width: 37.5em) {
+        .card .project__description--top {
+          font-size: 1.3rem; } }
     .card .project__description--bottom {
       flex: 0 1 5rem;
       display: flex;
