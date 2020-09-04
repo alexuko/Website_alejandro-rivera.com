@@ -79,7 +79,9 @@
             }
 
             &:hover,
-            &:active {
+            &:active,
+            &.active {
+                // font-weight: 600;
 
                 &::before {
                     transform: scale(1.5, 1);
@@ -95,7 +97,7 @@
 
 }
 
-@media only screen and (max-width: $bp-medium) {
+@media only screen and (max-width: $bp-large) {
 
     .nav__toggler {
         position: absolute;

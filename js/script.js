@@ -22,7 +22,42 @@ const navbar = document.querySelector('.nav');
 const toggler = document.querySelector('.nav__toggler');
 const linksList = document.querySelector('.nav__list');
 const links = document.querySelectorAll('.nav__item');
+const sections = document.querySelectorAll('section');
 
+const options = {
+    root: null,
+    threshold: [0.25, 0.3, 0.4, 0.5],
+    rootMargin: '-150px 0px -150px 0px'
+}
+const navcheck = (entries) => {
+    entries.forEach(entry => {
+        const className = entry.target.className;
+        // console.log(className);
+        const activeAnchor = document.querySelector(`[data-page=${className}]`);
+        // console.log(entry.isIntersecting);
+
+        if (!entry.isIntersecting) {
+            activeAnchor.classList.remove('active');
+            return;
+        }
+
+        if (entry.isIntersecting) {
+            console.log('activeAnchor: ' + activeAnchor);
+            activeAnchor.classList.add('active');
+            // activeAnchor.classList.toggle('active');
+        }
+    })
+}
+// let observer = new IntersectionObserver(navcheck, options);
+let observer = new IntersectionObserver(navcheck, options)
+sections.forEach(section => {
+    observer.observe(section);
+
+})
+
+
+
+//event listener when toggler is clicked
 toggler.addEventListener('click', () => {
     linksList.classList.toggle('open');
     links.forEach(link => {
@@ -41,6 +76,7 @@ toggler.addEventListener('click', () => {
     });
 
 });
+
 // change navigation bar color when scrolling more than the header section 
 window.addEventListener('scroll', () => {
     const offset = 110;
@@ -63,32 +99,26 @@ const cardsFront = document.querySelectorAll('.card__side--front');
 
 
 const nonFlipped = () => {
-        const card = event.currentTarget.parentElement;
-        // console.log(card)
-        const front = card.children[0];
-        const back = card.children[1];
-        back.style.transform = 'rotateY(180deg)';
-        front.style.transform = 'rotateY(0)';
-        // console.log('touched end , nonFlipped()');
+    const card = event.currentTarget.parentElement;
+    // console.log(card)
+    const front = card.children[0];
+    const back = card.children[1];
+    back.style.transform = 'rotateY(180deg)';
+    front.style.transform = 'rotateY(0)';
 }
-
-
-cardsBack.forEach(el => {
-    // el.addEventListener('touchend', nonFlipped )
-    el.addEventListener('click', nonFlipped )
-});
 
 const flipped = () => {
-        const card = event.currentTarget.parentElement;
-        // console.log(card)
-        const front = card.children[0];
-        const back = card.children[1];
-        back.style.transform = 'rotateY(0deg)';
-        front.style.transform = 'rotateY(-180deg)';
-        // console.log('touched end , flipped()');
+    const card = event.currentTarget.parentElement;
+    const front = card.children[0];
+    const back = card.children[1];
+    back.style.transform = 'rotateY(0deg)';
+    front.style.transform = 'rotateY(-180deg)';
 }
 
+cardsBack.forEach(el => {
+    el.addEventListener('click', nonFlipped)
+});
 
 cardsFront.forEach(el => {
-    el.addEventListener('touchend', flipped )
+    el.addEventListener('click', flipped)
 });

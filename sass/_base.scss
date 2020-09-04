@@ -25,7 +25,6 @@ $color-medium-turquoise: #3ACFCA;
 $color-blue-sapphire: #175676;
 $color-indigo-dye: #144B66;
 $color-indigo-dye-dark: #103F56;
-$color-indigo-dye-dark: rgb(16, 63, 86);
 $color-electric-indigo: #6E24E5;
 
 //////////////////////////////////
@@ -108,6 +107,7 @@ body {
     display: grid;
     grid-template-columns: [full-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, max-content) [col-end]) [center-end] 1fr [full-end];
     grid-template-rows: 10vh 90vh repeat(4, minmax(min-content, max-content));
+    grid-template-rows: 10vh 90vh repeat(4, minmax(80vh, max-content));
     position: relative;
 }
 
@@ -223,3 +223,12 @@ body {
     }
 
 }
+
+//////////////////////////////
+/////DISABLE TRANSITIONS
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }

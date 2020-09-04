@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="I am a Software developer. This is my personal website, have a look at my projects and skill. Please reach out if you have a project you have in mind or any other questions">
+        <meta name="author" content="Alejandro Rivera">
+        <meta name="keywords" content="Alejandro, Rivera, Alejandro Rivera, Software Engineer, Web Developer, Developer, Frontend, Java, React, HTML, CSS, JavaScript, AWS, UI, UX, Responsive">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/logo/logo5.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175575724-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+    
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+    
+            gtag('config', 'UA-175575724-1');
+        </script>
+        <title>404 - Error page</title>
+    </head>
+<body class="error">
+    <div class="error__container">
+        <h2 class="error__title">404</h2>
+        <h4 class="error__subtitle">oops! Page not found</h2>
+        <p class="error__text">Looks like the page you're looking for does not exist or might have been changed.</p>
+        <a href="./" class="error__return-btn">Return to home</a>
+    </div>
+</body>
+    <script>
+        const container = document.querySelector('.error__container');
+        window.onmousemove = el => {
+            let x = - el.clientX/3,
+                y = - el.clientY/3;
+                container.style.backgroundPositionX = x + 'px';
+                container.style.backgroundPositionY = y + 'px';
+            
+        }
+    </script>
+</html>
