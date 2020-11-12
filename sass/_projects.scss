@@ -8,7 +8,7 @@
         // background: grey;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-        grid-auto-rows: 50rem;
+        grid-auto-rows: 55rem;
         column-gap: 5rem;
         row-gap: 10rem;
         justify-content: center;
@@ -66,42 +66,67 @@
 
 
         &--front {
-            transform: rotateY(0);
+            transform: rotateY(0);         
 
         }
 
         &--back {
             transform: rotateY(180deg);
+            background-color: #fff;
 
         }
     }
 
-    &:hover &__side--front,
-    &__side--front.hover {
-        transform: rotateY(-180deg);
+    @media only screen and (min-width: $bp-phone) {
+        &:hover &__side--front,
+        &__side--front.hover {
+            transform: rotateY(-180deg);
+        }
+    
+        &:hover &__side--back,
+        &__side--back.hover {
+            transform: rotateY(0);
+        }
     }
-
-    &:hover &__side--back,
-    &__side--back.hover {
-        transform: rotateY(0);
-    }
+    
 
     &__image {
-        // height: calc(100% - 33.33%);
+        margin: 1rem auto;
+        width: 100%;
         flex: 1;
-        // object-fit: cover;
-        // object-position: right center;
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-position: center;
-        // border-radius: 5px 5px 0 0;//same border radius than SIDE
-        // background-blend-mode: screen;
-
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         border-radius: 5px 5px 0 0;
+        transform: rotate3d(100, 45, 3, 5deg) perspective(550px) scale(0.9) translateY(20px) translateZ(60px);
+        
 
         &--1 {
-            background-image: linear-gradient(145deg, rgba($color-tangerine, .3) 0%,rgba($color-tangerine, .15) 25%, rgba($color-tangerine, 0.02) 100%), url(../img/jpg/project.jpg);
-            // background-image: url(../img/jpg/project.jpg);
+            background-image: url(../img/png/FoodTimeApp.png);
+        }
+        &--2 {
+            background-image: url(../img/png/TrackingApp.png);
+        }
+        &--3 {
+            background-image: url(../img/png/SimonGameApp.png);
+        }
+        &--4 {
+            background-image: url(../img/png/ShoppingListApp2.png);
+        }
+        &--5 {
+            background-image: url(../img/png/NatoursApp.png);
+        }
+        &--6 {
+            background-image: url(../img/png/TravelAgencyApp.png);
+        }
+        &--7 {
+            background-image: url(../img/png/FancyHouseApp.png);
+        }
+        &--8 {
+            background-image: url(../img/png/Budgetapp.png);
+        }
+        &--9 {
+            background-image: url(../img/png/KQRcodes.png);
         }
     }
 

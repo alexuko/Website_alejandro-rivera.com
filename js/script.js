@@ -98,27 +98,41 @@ const cardsBack = document.querySelectorAll('.card__side--back');
 const cardsFront = document.querySelectorAll('.card__side--front');
 
 
-const nonFlipped = () => {
-    const card = event.currentTarget.parentElement;
-    // console.log(card)
-    const front = card.children[0];
-    const back = card.children[1];
-    back.style.transform = 'rotateY(180deg)';
-    front.style.transform = 'rotateY(0)';
-}
+window.addEventListener('resize', () => {
+    //flip card with a click only on mobiles
+    console.log(window.innerWidth);
+    if (window.innerWidth < 500) {
+        const nonFlipped = (event) => {
+            const card = event.currentTarget.parentElement;
+            // console.log(card)
+            const front = card.children[0];
+            const back = card.children[1];
+            back.style.transform = 'rotateY(180deg)';
+            front.style.transform = 'rotateY(0)';
+        }
+    
+        const flipped = (event) => {
+            const card = event.currentTarget.parentElement;
+            const front = card.children[0];
+            const back = card.children[1];
+            back.style.transform = 'rotateY(0deg)';
+            front.style.transform = 'rotateY(-180deg)';
+        }
+    
+        cardsBack.forEach(el => {
+            el.addEventListener('click', nonFlipped)
+        });
+    
+        cardsFront.forEach(el => {
+            el.addEventListener('click', flipped)
+        });  
 
-const flipped = () => {
-    const card = event.currentTarget.parentElement;
-    const front = card.children[0];
-    const back = card.children[1];
-    back.style.transform = 'rotateY(0deg)';
-    front.style.transform = 'rotateY(-180deg)';
-}
+    }
 
-cardsBack.forEach(el => {
-    el.addEventListener('click', nonFlipped)
 });
 
-cardsFront.forEach(el => {
-    el.addEventListener('click', flipped)
-});
+
+
+
+
+

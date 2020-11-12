@@ -59,6 +59,7 @@ $bp-big: 75em; //1200/16px = 75
 $bp-large: 62.5em; //1000/16px = 62.5
 $bp-medium: 50.0em; //800/16px = 50.0
 $bp-small: 37.5em; //600/16px = 37.5
+$bp-phone: 31.25em; //500/16px = 31.25
 $bp-mini: 21.87em; //350/16px = 21.87
 
 //////////////////////////////////
@@ -124,6 +125,7 @@ body {
     display: none;
 
     @media only screen and (max-width: $bp-medium) {
+
         display: inline-flex;
         left: 50%;
         transform: translateX(-50%);

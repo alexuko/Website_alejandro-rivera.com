@@ -97,6 +97,7 @@
 
 }
 
+
 @media only screen and (max-width: $bp-large) {
 
     .nav__toggler {
@@ -148,18 +149,18 @@
                 clip-path: circle(30px at 95% -10%);
         transition: all .5s ease-in-out;
         pointer-events: none;
-        background: rgba($color-indigo-dye-dark, .9);
+        background: rgba($color-indigo-dye-dark, 1.0);
         
-        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-        }
+        // @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        //     -webkit-backdrop-filter: blur(10px);
+        //     backdrop-filter: blur(10px);
+        // }
         
     }
     
     .nav__list.open {
-        -webkit-clip-path: circle(125vh at 95% -10%);
-                clip-path: circle(125vh at 95% -10%);
+        -webkit-clip-path: circle(150vh at 95% -10%);
+                clip-path: circle(150vh at 95% -10%);
         pointer-events: all;
     }
     
